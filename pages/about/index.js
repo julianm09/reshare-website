@@ -58,7 +58,7 @@ const GridUI = styled.div`
 
 const ImageUI = styled.img`
   width: 100%;
-`
+`;
 
 const About = ({}) => {
   return (
