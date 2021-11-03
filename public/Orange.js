@@ -14,8 +14,6 @@ export default function Orange({ ...props }) {
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
 
-
-
   useEffect(() => {
     function onScroll() {
       let currentPosition = window.pageYOffset; // or use document.documentElement.scrollTop;
@@ -50,9 +48,7 @@ export default function Orange({ ...props }) {
         -5 + scrollTop * 0.05,
         0.03
       ))
-
     )
-    
   );
 
   const group = useRef();
