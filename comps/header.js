@@ -14,6 +14,7 @@ const HeaderUI = styled.div`
   background: #ee9837;
   font-size: 16px;
   font-weight: 500;
+  color: white;
 `;
 
 const ContainerUI = styled.div`
@@ -37,7 +38,7 @@ export const Header = ({}) => {
     <HeaderUI>
       <ContainerUI>
         <Link href="/">
-          <img style={{ cursor: "pointer" }} height="100px;" src="/logo.png" />
+          <img style={{ cursor: "pointer" }} height="75px" src="/logo.png" />
         </Link>
         <LinkContainerUI>
           <LinkUI>
