@@ -17,7 +17,7 @@ const HeaderUI = styled.div`
   color: white;
 
   @media (max-width: 800px ){
-    margin: 50px 0 0 0;
+    padding: 50px 0 0 0;
     align-items: flex-start;
   }
 `;
