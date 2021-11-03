@@ -35,19 +35,21 @@ export default function Orange({ ...props }) {
     (state) => (
       (ref.current.position.y = lerp(
         ref.current.position.y,
-        -5 + scrollTop * 0.05,
+        -4 + scrollTop * 0.05,
         0.03
       )),
       (ref.current.rotation.x = lerp(
-        1 + ref.current.position.y,
-        -5 + scrollTop * 0.05,
+        0 + ref.current.position.y,
+        5 + scrollTop * 0.05,
         0.03
       )),
       (ref.current.rotation.z = lerp(
         ref.current.position.y,
         -5 + scrollTop * 0.05,
         0.03
-      ))
+      )),
+      (ref.current.rotation.y += 0.01)
+      
     )
   );
 

@@ -12,7 +12,7 @@ const HeaderUI = styled.div`
   z-index: 10000;
   align-items: center;
   z-index: 10000;
-  background: #ee9837;
+
   font-weight: 500;
   color: white;
 
@@ -25,7 +25,7 @@ const HeaderUI = styled.div`
 const ContainerUI = styled.div`
   width: 80%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   display: flex;
   @media (max-width: 800px ){
@@ -43,7 +43,7 @@ const LinkContainerUI = styled.div`
 `;
 
 const LinkUI = styled.div`
-  margin: 0 25px;
+  margin: 0 0 0 50px;
   font-size: 12px;
 `;
 
@@ -54,7 +54,7 @@ export const Header = ({}) => {
         <Link href="/">
           <img style={{ cursor: "pointer" }} height="75px" src="/logo.png" />
         </Link>
-        <LinkContainerUI>
+{/*         <LinkContainerUI>
           <LinkUI>
             <Link href="/">home</Link>
           </LinkUI>
@@ -64,7 +64,7 @@ export const Header = ({}) => {
           <LinkUI>
             <Link href="/about">about</Link>
           </LinkUI>
-        </LinkContainerUI>
+        </LinkContainerUI> */}
       </ContainerUI>
     </HeaderUI>
   );

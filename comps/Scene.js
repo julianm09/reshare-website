@@ -5,6 +5,7 @@ import Orange from "../public/Orange";
 
 export default function Scene({ scrollTop }) {
   return (
+    
     <Canvas
       style={{ width: "100%", height: "100vh", position: "fixed", top: 0 }}
     >
