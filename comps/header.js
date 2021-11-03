@@ -9,12 +9,17 @@ const HeaderUI = styled.div`
   top: 0;
   left: 0;
   justify-content: center;
+  z-index: 10000;
   align-items: center;
   z-index: 10000;
   background: #ee9837;
-  font-size: 16px;
   font-weight: 500;
   color: white;
+
+  @media (max-width: 800px ){
+    margin: 50px 0 0 0;
+    align-items: flex-start;
+  }
 `;
 
 const ContainerUI = styled.div`
@@ -23,14 +28,23 @@ const ContainerUI = styled.div`
   align-items: center;
   flex-direction: row;
   display: flex;
+  @media (max-width: 800px ){
+    flex-direction: column;
+  }
+  
 `;
 
 const LinkContainerUI = styled.div`
   display: flex;
+  @media (max-width: 800px ){
+    margin: 50px 0 0 0;
+  }
+
 `;
 
 const LinkUI = styled.div`
   margin: 0 25px;
+  font-size: 12px;
 `;
 
 export const Header = ({}) => {
@@ -45,10 +59,10 @@ export const Header = ({}) => {
             <Link href="/">home</Link>
           </LinkUI>
           <LinkUI>
-            <Link href="/progress">our progress</Link>
+            <Link href="/progress">progress</Link>
           </LinkUI>
           <LinkUI>
-            <Link href="/about">about us</Link>
+            <Link href="/about">about</Link>
           </LinkUI>
         </LinkContainerUI>
       </ContainerUI>

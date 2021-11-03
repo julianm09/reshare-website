@@ -19,7 +19,8 @@ const ContainerUI = styled.div`
 const HeadingUI = styled.div`
   font-family: Poppins;
   color: white;
-  font-size: 100px;
+  font-size: calc(36px + 5vw);
+  text-align: center;
 `;
 
 const TextUI = styled.div`
