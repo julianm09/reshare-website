@@ -12,7 +12,7 @@ import { postQuery } from "../lib/sanity/postQuery";
 
 const ContainerUI = styled.div`
 
-  background: #ee9837;
+  background: #fff;
   justify-content: flex-start;
   align-items: center;
   display: flex;
@@ -30,6 +30,10 @@ const HeadingUI = styled.div`
   
 `;
 
+const CircleLandingPage = styled.div`
+
+`;
+
 const TextUI = styled.div`
   font-family: Poppins;
   color: white;
@@ -38,27 +42,25 @@ const TextUI = styled.div`
   top: 100px;
 `;
 
-export default function Home({posts}) {
+export default function Home() {
   return (
-   
       <ContainerUI>
-        <HeadingUI>Welcome to reshare</HeadingUI>
-        <TextUI>Scroll Down 👇</TextUI>
-        <Scene />
 
-        <Progress posts={posts}/>
+        <HeadingUI>RESHARE</HeadingUI>
+        <TextUI>Scroll Down 👇</TextUI>
+        {/* <Scene /> */}
+
       </ContainerUI>
-  
   );
 }
 
 
-export async function getStaticProps({ params }) {
-  const posts = await client.fetch(postQuery);
+// export async function getStaticProps({ params }) {
+//   const posts = await client.fetch(postQuery);
 
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }

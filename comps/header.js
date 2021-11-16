@@ -14,7 +14,7 @@ const HeaderUI = styled.div`
   z-index: 10000;
 
   font-weight: 500;
-  color: white;
+  color: black;
 
   @media (max-width: 800px ){
     padding: 50px 0 0 0;
@@ -24,8 +24,7 @@ const HeaderUI = styled.div`
 
 const ContainerUI = styled.div`
   width: 80%;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   display: flex;
   @media (max-width: 800px ){
@@ -34,37 +33,77 @@ const ContainerUI = styled.div`
   
 `;
 
-const LinkContainerUI = styled.div`
+const Icon = styled.div`
+  flex-grow: 10;
+`;
+
+const LinkContainer = styled.div`
   display: flex;
-  @media (max-width: 800px ){
-    margin: 50px 0 0 0;
-  }
-
+  font-family: Poppins;
+  flex-grow: 1;
 `;
 
-const LinkUI = styled.div`
-  margin: 0 0 0 50px;
-  font-size: 12px;
+
+const Text = styled.p`
+  margin-right: 50px;
+  color:${props=>props.color};
 `;
 
-export const Header = ({}) => {
+const RightHeader = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+`;
+
+const MarginRight = styled.div`
+  margin-right: 50px;
+`;
+
+export const Header = ({
+  color = "#C0C0C0"
+}) => {
   return (
     <HeaderUI>
       <ContainerUI>
+
+        <Icon>
+          <Link href="/">
+            <img style={{ cursor: "pointer" }} height="75px" src="/Group 75.svg" />
+          </Link>
+        </Icon>
+
+      <LinkContainer>
+
+        <Text color={color}>Home</Text>
+        <Text color={color}>Progress</Text>
+        <Text color={color}>Reshare Team</Text>
+        <Text color={color}>Marketing</Text>
+
+      </LinkContainer>
+
+      <RightHeader>
+
+        <MarginRight>
         <Link href="/">
-          <img style={{ cursor: "pointer" }} height="75px" src="/logo.png" />
+          <img style={{cursor: "pointer"}} height="24px" src="Group-1.svg" />
         </Link>
-{/*         <LinkContainerUI>
-          <LinkUI>
-            <Link href="/">home</Link>
-          </LinkUI>
-          <LinkUI>
-            <Link href="/progress">progress</Link>
-          </LinkUI>
-          <LinkUI>
-            <Link href="/about">about</Link>
-          </LinkUI>
-        </LinkContainerUI> */}
+        </MarginRight>
+
+        <MarginRight>
+        <Link href="/">
+          <img style={{cursor: "pointer"}} height="24px" src="Vector.svg" />
+        </Link>
+        </MarginRight>
+
+        <MarginRight>
+        <Link href="/">
+          <img style={{cursor: "pointer"}} height="24px" src="Group.svg" />
+        </Link>
+        </MarginRight>
+
+      </RightHeader>
+
       </ContainerUI>
     </HeaderUI>
   );
