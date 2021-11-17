@@ -50,14 +50,14 @@ const Text = styled.p`
 `;
 
 const RightHeader = styled.div`
-  flex-grow: 1;
+  flex-grow: 4;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 `;
 
 const MarginRight = styled.div`
-  margin-right: 50px;
+  margin-left: 40px;
 `;
 
 export const Header = ({
@@ -75,10 +75,10 @@ export const Header = ({
 
       <LinkContainer>
 
-        <Text color={color}>Home</Text>
-        <Text color={color}>Progress</Text>
-        <Text color={color}>Reshare Team</Text>
-        <Text color={color}>Marketing</Text>
+        <Text style={{cursor: "pointer"}} color={color}>Home</Text>
+        <Text style={{cursor: "pointer"}} color={color}>Progress</Text>
+        <Text style={{cursor: "pointer"}} color={color}>Reshare Team</Text>
+        <Text style={{cursor: "pointer"}} color={color}>Marketing</Text>
 
       </LinkContainer>
 
