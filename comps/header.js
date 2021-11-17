@@ -3,18 +3,14 @@ import Link from "next/link";
 
 const HeaderUI = styled.div`
   display: flex;
-  height: 150px;
+  height: 100px;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
   justify-content: center;
   z-index: 10000;
   align-items: center;
   z-index: 10000;
-
-  font-weight: 500;
-  color: black;
+  background-color: white;
 
   @media (max-width: 800px ){
     padding: 50px 0 0 0;
@@ -27,10 +23,10 @@ const ContainerUI = styled.div`
   align-items: center;
   flex-direction: row;
   display: flex;
+  
   @media (max-width: 800px ){
     flex-direction: column;
   }
-  
 `;
 
 const Icon = styled.div`
@@ -56,7 +52,7 @@ const RightHeader = styled.div`
   justify-content: flex-end;
 `;
 
-const MarginRight = styled.div`
+const MarginLeft = styled.div`
   margin-left: 40px;
 `;
 
@@ -84,23 +80,23 @@ export const Header = ({
 
       <RightHeader>
 
-        <MarginRight>
+        <MarginLeft>
         <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Group-1.svg" />
         </Link>
-        </MarginRight>
+        </MarginLeft>
 
-        <MarginRight>
+        <MarginLeft>
         <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Vector.svg" />
         </Link>
-        </MarginRight>
+        </MarginLeft>
 
-        <MarginRight>
+        <MarginLeft>
         <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Group.svg" />
         </Link>
-        </MarginRight>
+        </MarginLeft>
 
       </RightHeader>
 
