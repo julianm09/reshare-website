@@ -53,10 +53,17 @@ const ReshareTitle = styled.p`
   z-index:2;
 `;
 
+const Orange = styled.div`
+  position: absolute;
+  top: 450px;
+  left: 600px;
+  z-index:1;
+`;
+
 export default function Home() {
   return (
       <ContainerUI>
-        
+
 {/* ----------- Landing Page ----------- */}
 
       <LandingPageContainer>
@@ -69,21 +76,23 @@ export default function Home() {
           </Link>
         </Lime>
 
-        <ReshareTitle>RESHARE</ReshareTitle>
+        <Orange>
+          <Link href="/">
+            <img height="400px" src="/orange.png" />
+          </Link>
+        </Orange>
 
+        <ReshareTitle>RESHARE</ReshareTitle>
 
       </LandingPageContainer>
 
 {/* ----------- Landing Page ----------- */}
-
 
         {/* <Scene /> */}
 
       </ContainerUI>
   );
 }
-
-
 
 
 
