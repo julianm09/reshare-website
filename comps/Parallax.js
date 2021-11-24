@@ -30,6 +30,7 @@ function Parallax(Element, weight) {
                 WrappedElement: ElementWithRef
             }, () => {
                 this.setState({start_position: ref.current.offsetTop}, ()=>{
+                    this.wrappedElement = ref;
                     document.addEventListener('scroll', this.animate_scroll);
                 });
             });
@@ -44,17 +45,17 @@ function Parallax(Element, weight) {
 
         animation_loop = () => {
             let current_offset = window.pageYOffset;
-            let difference = current_offset = this.last_offset;
+            let difference = current_offset - this.last_offset;
             difference *= this.state.ease;
 
-            if(Math.abs(difference) < 0.05){
-                this.last_offset = current_offset;
-                this.animation_running = false;
+            // if(Math.abs(difference) < 0.05){
+            //     this.last_offset = current_offset;
+            //     this.animation_running = false;
 
-                return;
-            }
+            //     return;
+            // }
 
-            this.WrappedElement.current.style.top = `${this.state.start_position - this.last_offset}px`;
+            this.wrappedElement.current.style.top = `${this.state.start_position - this.last_offset}px`;
 
             this.last_offset += difference;
 

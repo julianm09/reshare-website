@@ -24,9 +24,13 @@ const LandingPageContainer = styled.div`
 `;
 
 const Circle = styled.div`
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 503px;
   height: 503px;
   border-radius: 300px;
@@ -36,14 +40,14 @@ const Circle = styled.div`
   transform: translate(-50%,-50%);
 `;
 
-const ReshareTitle = styled.p`
-  position: absolute;
-  color: white;
-  font-weight: 500;
-  font-family: poppins;
-  font-size: 100px;
-  z-index:2;
-`;
+// const ReshareTitle = styled.p`
+//   position: absolute;
+//   color: white;
+//   font-weight: 500;
+//   font-family: poppins;
+//   font-size: 100px;
+//   z-index:2;
+// `;
 
 export default function Home() {
   
@@ -53,7 +57,7 @@ export default function Home() {
   
           <Circle>
   
-          <ReshareTitle>RESHARE</ReshareTitle>
+          {/* <ReshareTitle>RESHARE</ReshareTitle> */}
   
              </Circle>
   

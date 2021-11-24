@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 import styled from "styled-components";
 import Link from "next/link";
-import { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { client } from "../lib/sanity/client";
 import { postQuery } from "../lib/sanity/postQuery";
 
@@ -18,12 +18,24 @@ import LandingPage from "../comps/LandingPage"
 
 
 const ContainerUI = styled.div`
-  background: #fff;
+  /* background: #fff;
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: column; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 150vh;
+  background-color: white;
+
+  overflow-x: hidden; 
 `;
 
 const LandingPageContainer = styled.div`
@@ -34,7 +46,7 @@ const LandingPageContainer = styled.div`
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 300vh;
+  height: 1000px;
   background-color: white;
 
   overflow-x: hidden;
@@ -62,7 +74,6 @@ const Lime = styled.div`
 `;
 
 const ReshareTitle = styled.p`
-  position: absolute;
   color: white;
   font-weight: 500;
   font-family: poppins;
@@ -94,18 +105,22 @@ const ArrowDownScroll = styled.p`
 
 export default function Home() {
 
-  const WrappedCustom = Parallax(
-    <div>
-      <LandingPage />
-    </div>, 0.08
-  )
+  const Orb = Parallax(<div style={styles.orb}><ReshareTitle>RESHARE</ReshareTitle></div>,0.05);
+
 
   return (
       <ContainerUI>
 
-{/* ----------- Landing Page ----------- */}
+      <LandingPageContainer>
+      <Orb/>
+      </LandingPageContainer>
 
-      <WrappedCustom />
+
+
+
+
+      {/* <WrappedCustom /> */}
+
 
         {/* <Circle>
 
@@ -117,9 +132,9 @@ export default function Home() {
           <Link href="/">
             <img height="400px" src="/landingpage_lime.png"/>
           </Link>
-        </Lime> */}
+        </Lime>
 
-        {/* <Orange>
+        <Orange>
           <Link href="/">
             <img height="400px" src="/orange.png" />
           </Link>
@@ -129,20 +144,52 @@ export default function Home() {
 
       {/* </Orb> */}
 
-{/* ----------- Landing Page ----------- */}
 
-    <ArrowContainer>
+    {/* <ArrowContainer>
       <ArrowDownScroll>Scroll Down 👇</ArrowDownScroll>
-    </ArrowContainer>
+    </ArrowContainer> */}
 
 
 
         {/* <Scene /> */}
-
       </ContainerUI>
   );
 }
 
+
+const styles = {
+  orb: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+
+    width:'503px',
+    height:'503px',
+    borderRadius: '50%',
+    position:'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: "#DFEFB9",
+
+    boxShadow: "0px 2px  #C4C4C4", 
+  
+  },
+
+  // LandingPage: {
+  //   display: "flex",
+  // alignItems: "center",
+  // justifyContent: "center",
+
+  // margin: 0,
+  // padding: 0,
+  // width: "100vw",
+  // height: "300vh",
+  // backgroundColor: "white",
+
+  // overflowX: "hidden",
+  // }
+}
 
 
 
