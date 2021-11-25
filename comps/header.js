@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
 
 const HeaderUI = styled.div`
   display: flex;
@@ -24,7 +23,7 @@ const ContainerUI = styled.div`
   flex-direction: row;
   display: flex;
   
-  @media (max-width: 800px ){
+  @media (max-width: 950px ){
     flex-direction: column;
   }
 `;
@@ -64,9 +63,9 @@ export const Header = ({
       <ContainerUI>
 
         <Icon>
-          <Link href="/">
+          
             <img style={{ cursor: "pointer" }} height="46px" src="/Group 75.svg" />
-          </Link>
+          
         </Icon>
 
       <LinkContainer>
@@ -81,21 +80,15 @@ export const Header = ({
       <RightHeader>
 
         <MarginLeft>
-        <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Group-1.svg" />
-        </Link>
         </MarginLeft>
 
         <MarginLeft>
-        <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Vector.svg" />
-        </Link>
         </MarginLeft>
 
         <MarginLeft>
-        <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Group.svg" />
-        </Link>
         </MarginLeft>
 
       </RightHeader>
