@@ -1,6 +1,11 @@
+import { client } from "../../lib/sanity/client";
 import styled from "styled-components";
+import { postQuery } from "../../lib/sanity/postQuery";
+import BlockContent from "@sanity/block-content-to-react";
+import Header from "../../comps/header";
 import MemberCard from "../../comps/memberCard";
 import Form from "../../comps/form";
+
 
 const ContainerUI = styled.div`
   display: flex;
@@ -8,6 +13,51 @@ const ContainerUI = styled.div`
   flex-direction: column;
   color: #484349;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+`;
+const HeaderUI = styled.div`
+  position: relative;
+  margin: 0 0 0 0;
+  color: #484349;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 50px 0;
+`;
+
+const TimelineUI = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+`;
+
+const PostUI = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 0 50px 0;
+`;
+
+const TitleUI = styled.div`
+  position: relative;
+  margin: 0 0 0 0;
+  color: #484349;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+`;
+
+const GridUI = styled.div`
+  position: relative;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 2fr 2fr 2fr;
+  width: 50%;
+  grid-gap: 150px;
+`;
+
+const ImageUI = styled.img`
   width: 100%;
 `;
 
@@ -53,7 +103,7 @@ const AboutCont = styled.div`
   }
 `;
 
-const Title = styled.text`
+const Title = styled.div`
   margin-top: 130px;
   font-weight: 600;
   font-size: 22px;
@@ -61,7 +111,7 @@ const Title = styled.text`
   display: flex;
   justify-content: center;
 `
-const Info = styled.text`
+const Info = styled.div`
   margin-top: 20px;
   margin-bottom: 50px;
   width: 700px;
@@ -69,13 +119,7 @@ const Info = styled.text`
   font-size: 14px;
 `
 
-const InfoDiv = styled.div`
-  width:100vw;
-  display: flex;
-  justify-content: center;
-`
-
-const SubTitle = styled.text`
+const SubTitle = styled.div`
   width: 610px;
   height: auto;
   font-weight: 500;
@@ -86,28 +130,61 @@ const SubTitle = styled.text`
   margin-bottom: 30px;
 `
 
-export default function About() {
-  return (
-    <AboutCont>
+const About = ({}) => {
+  return <AboutCont>
       <ContainerUI>
-      <Title>
+        <Title>
           Our Developer Team
         </Title>
-          <InfoDiv>
+        <div className="info">
           <Info>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            </Info>
-          </InfoDiv>
-        {/* <div className="memberCard">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+          </Info>
+        </div>
+        <div className="memberCard">
           <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
           <MemberCard name="Michael Trinh" title="Project manager &amp; Front-end Developer" src="/Michael.svg"/>
           <MemberCard/>
-        </div> */}
+        </div>
+
+        <Title>
+          Our Designer Team
+        </Title>
+        <div className="info">
+          <Info>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+          </Info>
+        </div>
+        <div className="memberCard">
+          <MemberCard name="Juhee Kim" title="Lead Designer &amp; UI/UX Designer" src="/Juhee.svg" color="#EE9837"/>
+          <MemberCard name="Glian Palma" title="UI/UX Designer &amp; Front-end Develper" src="/Glian.svg" color="#EE9837" size="220px"/>
+          <MemberCard name="Tiffany Tu" title="UI/UX Designer &amp; Marketer" src="/Tiffany.svg" color="#EE9837"/>
+        </div>
+
+        <SubTitle>Want to get started?</SubTitle>
+        <div className="contactSec">
+          <Form/>
+          <div className="contactInfoSec">
+            <div className="contactInfo">
+              Reshare helps reduce food waste in Vancouver by letting grocery stores sell excess inventory at a discounted price.
+            </div>
+            <div className="contactInfo">
+              Want to get started?
+            </div>
+            <div className="icon">
+              <img src="/Union.svg"></img>
+              <img className="bcit" src="/bc-institute-technology.png"></img>
+            </div>
+          </div>        
+        </div>
       </ContainerUI>
-    </AboutCont>
-  );
+  </AboutCont>
 };
 
+export default About;
