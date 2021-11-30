@@ -5,8 +5,10 @@ import React, { useState, useEffect, Suspense } from "react";
 
 // --------- Components--------
 import { Header } from "../../comps/header";
+import Persona from "../../comps/userPersona"
 import LandingPage from "../../comps/LandingPage"
 import Step from "../../comps/Steps.js"
+import Member from "../../comps/memberCard"
 import StepsWrapper from "../../comps/StepsWrapper"
 
 
@@ -15,10 +17,9 @@ const ContainerUI = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color:white;
 `;
 
@@ -255,6 +256,43 @@ const ProcessTable2 = styled.div`
     height: ${props=>props.height};
     background-color: white;
 `;
+//------------ Process Container End ----------
+
+//------------ User Profile -------------
+const ProfileContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 1024px;
+  background-color: #F3F3F3;
+`;
+
+const ProfileTarget = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* margin-top: 100px; */
+  margin-left: 150px;
+  color: #EE9837;
+  z-index:1;
+`;
+
+const ProfileHeader = styled.p`
+  color: #EE9837;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0;
+`;
+
+const PersonaContainer = styled.div`
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+`;
 
 
 
@@ -393,8 +431,20 @@ export default function Home() {
     </TableContainer>
   </ProcessContainer>
 
+  <ProfileContainer>
+    <ProfileTarget>
+      target market
+      <ProfileHeader>Research User Profile</ProfileHeader>
+    </ProfileTarget>
+
+    <PersonaContainer>
+      <Persona/>
+      <Persona/>
+    </PersonaContainer>
+  </ProfileContainer>
+
   <Arrow>
-      <img marginBottom="10px" height="25px" src="./Arrow.svg"/>
+      <img height="25px" src="./Arrow.svg"/>
   </Arrow>
 
   </ContainerUI>
