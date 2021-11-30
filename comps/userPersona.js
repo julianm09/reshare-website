@@ -61,7 +61,7 @@ const Bio = styled.text`
 
 //props
 const UserPersona = ({
-    src = "/Ezekiel.png",
+    src = "/Ezekiel-Davis.svg",
     name = "Ezekiel Davis",
     age = "22",
     location = "Vancouver, BC",
