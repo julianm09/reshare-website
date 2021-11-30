@@ -87,7 +87,7 @@ export default function About() {
       <Title>
           Our Developer Team
         </Title>
-        <div className="info">
+        {/* <div className="info">
           <Info>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -96,10 +96,10 @@ export default function About() {
           </Info>
         </div>
         <div className="memberCard">
-          {/* <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
+          <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
           <MemberCard name="Michael Trinh" title="Project manager &amp; Front-end Developer" src="/Michael.svg"/>
-          <MemberCard/> */}
-        </div>
+          <MemberCard/>
+        </div> */}
       </ContainerUI>
     </AboutCont>
   );
