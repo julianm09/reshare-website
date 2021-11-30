@@ -266,7 +266,7 @@ const ProfileContainer = styled.div`
   justify-content: flex-start;
   width: 100vw;
   height: 1024px;
-  background-color: #F3F3F3;
+  /* background-color: #F3F3F3; */
 `;
 
 const ProfileTarget = styled.div`
@@ -292,9 +292,48 @@ const PersonaContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
+  
+  @media (max-width:950px) {
+    flex-direction: column;
+  }
+`;
+//--------- User Profile End ---------
+
+//--------- Low Fidelity -------------
+const LowFidelityContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top:30px;
+  width: 100vw;
+  height: 1150px;
+  background-color: #3C362A;
 `;
 
+const LowFidelityTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* margin-top: 100px; */
+  margin-left: 150px;
+  color: #EE9837;
+  z-index:1;
+`;
 
+const LowFidelityHeader = styled.p`
+  color: #EE9837;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0;
+`;
+
+const LoFi = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+`;
 
 export default function Home() {
 
@@ -439,9 +478,19 @@ export default function Home() {
 
     <PersonaContainer>
       <Persona/>
-      <Persona/>
+      <Persona src="./Janeth.png" name="Janeth Guzman" age="22" occupation="Administrative Associate" income="$60,000 / Year" bio="Janeth is a single mother of two children and works full time at a health tech company downtown. She loves to stay active and healthy when she can, and wants the same for her kids. Janeth enjoys staying active by going on hikes and riding her bike on the weekend. It is very important for Janeth to eat high quality produce but finds that sometimes it can get a little expensive. She is very concious about food waste, so she cooks little by little every day."/>
     </PersonaContainer>
   </ProfileContainer>
+
+  <LowFidelityContainer>
+    <LowFidelityTitle>
+      Prototypes process
+      <LowFidelityHeader>Low Fidelity Prototype</LowFidelityHeader>
+    </LowFidelityTitle>
+    <LoFi>
+      <img src="./lofi.png"/>
+    </LoFi>
+  </LowFidelityContainer>
 
   <Arrow>
       <img height="25px" src="./Arrow.svg"/>

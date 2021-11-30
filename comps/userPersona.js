@@ -4,59 +4,55 @@ import styled from 'styled-components';
 const Cont = styled.div`
     height: 342px;
     width: 443px;
+    margin: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-`;
 
+`;
 const Top = styled.div`
     display: flex;
     margin-top: 25px;
     width: 443px;
     justify-content: space-between;
-`
-
+`;
 const Img = styled.img`
     width: 150px;
     height: 150px;
-`
-
+`;
 const Info = styled.div`
     display: flex;
     flex-direction: column;
-`
+    margin-left: 10px;
+`;
 
 const Name = styled.text`
-    width: 237px;
+    width: 295px;
     height: 54px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 36px;
-`
+`;
 const InfoItems = styled.div`
-    width: 237px;
+    width: 295px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1px;
-`
-
+`;
 const InfoTitle = styled.text`
     font-weight: bold;
     font-size: 14px;
-`
-
+`;
 const InfoDetail = styled.text`
     font-size: 14px;
-`
-
+`;
 const Bot = styled.div`
     margin-top: 30px;
-`
-
+`;
 const Bio = styled.text`
     font-size: 14px;
-`
+`;
 
 
 //props
