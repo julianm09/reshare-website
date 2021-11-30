@@ -85,7 +85,7 @@ const SubTitle = styled.text`
   margin-bottom: 30px;
 `
 
-const About = ({}) => {
+export default function About() {
   return (
     <AboutCont>
       <ContainerUI>
@@ -144,4 +144,3 @@ const About = ({}) => {
   );
 };
 
-export default About;
