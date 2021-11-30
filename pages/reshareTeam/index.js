@@ -21,7 +21,7 @@ const AboutCont = styled.div`
   margin:0;
   height: 100vh;
 
-  .memberCard{
+  /* .memberCard{
     display: flex;
     width: 100vw;
     justify-content: space-around;
@@ -55,7 +55,7 @@ const AboutCont = styled.div`
     width: 45px;
     height: 45px;
     margin-left: 40px;
-  }
+  } */
 `;
 
 const Title = styled.text`
@@ -92,7 +92,7 @@ export default function About() {
         <Title>
           Our Developer Team
         </Title>
-        <div className="info">
+        <div >
           <Info>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -100,7 +100,7 @@ export default function About() {
           It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
           </Info>
         </div>
-        <div className="memberCard">
+        <div >
           <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
           <MemberCard name="Michael Trinh" title="Project manager &amp; Front-end Developer" src="/Michael.svg"/>
           <MemberCard/>
@@ -109,7 +109,7 @@ export default function About() {
         <Title>
           Our Designer Team
         </Title>
-        <div className="info">
+        <div >
           <Info>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -117,25 +117,25 @@ export default function About() {
           It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
           </Info>
         </div>
-        <div className="memberCard">
+        <div >
           <MemberCard name="Juhee Kim" title="Lead Designer &amp; UI/UX Designer" src="/Juhee.svg" color="#EE9837"/>
           <MemberCard name="Glian Palma" title="UI/UX Designer &amp; Front-end Develper" src="/Glian.svg" color="#EE9837" size="220px"/>
           <MemberCard name="Tiffany Tu" title="UI/UX Designer &amp; Marketer" src="/Tiffany.svg" color="#EE9837"/>
         </div>
 
         <SubTitle>Want to get started?</SubTitle>
-        <div className="contactSec">
+        <div >
           <Form/>
-          <div className="contactInfoSec">
-            <div className="contactInfo">
+          <div >
+            <div>
               Reshare helps reduce food waste in Vancouver by letting grocery stores sell excess inventory at a discounted price.
             </div>
-            <div className="contactInfo">
+            <div >
               Want to get started?
             </div>
-            <div className="icon">
+            <div >
               <img src="/Union.svg"></img>
-              <img className="bcit" src="/bc-institute-technology.png"></img>
+              <img  src="/bc-institute-technology.png"></img>
             </div>
           </div>        
         </div>
