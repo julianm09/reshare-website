@@ -145,8 +145,8 @@ const About = ({}) => {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
-          <MemberCard name="Michael Trinh" title="Project manager &amp; Front-end Developer" src="/Michael.svg"/>
+          <MemberCard name="Julian Mayes" title="Project manager + Lead Developer" src="/Julian.svg" size="250px"/>
+          <MemberCard name="Michael Trinh" title="Project manager + Front-end Developer" src="/Michael.svg"/>
           <MemberCard/>
         </div>
 
@@ -162,9 +162,9 @@ const About = ({}) => {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Juhee Kim" title="Lead Designer &amp; UI/UX Designer" src="/Juhee.svg" color="#EE9837"/>
-          <MemberCard name="Glian Palma" title="UI/UX Designer &amp; Front-end Develper" src="/Glian.svg" color="#EE9837" size="220px"/>
-          <MemberCard name="Tiffany Tu" title="UI/UX Designer &amp; Marketer" src="/Tiffany.svg" color="#EE9837"/>
+          <MemberCard name="Juhee Kim" title="Lead Designer + UI/UX Designer" src="/Juhee.svg" color="#EE9837"/>
+          <MemberCard name="Glian Palma" title="UI/UX Designer + Front-end Develper" src="/Glian.svg" color="#EE9837" size="220px"/>
+          <MemberCard name="Tiffany Tu" title="UI/UX Designer + Marketer" src="/Tiffany.svg" color="#EE9837"/>
         </div>
 
         <SubTitle>Want to get started?</SubTitle>
