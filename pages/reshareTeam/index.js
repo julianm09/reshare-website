@@ -96,9 +96,9 @@ export default function About() {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
+          {/* <MemberCard name="Julian Mayes" title="Project manager &amp; Lead Developer" src="/Julian.svg" size="250px"/>
           <MemberCard name="Michael Trinh" title="Project manager &amp; Front-end Developer" src="/Michael.svg"/>
-          <MemberCard/>
+          <MemberCard/> */}
         </div>
       </ContainerUI>
     </AboutCont>
