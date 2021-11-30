@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Cont = styled.div`
     width: 780px;
-    height: 520px;
+    height: 450px;
     background: #FFEE90;
     color: #838383;
     display: flex;
@@ -35,6 +35,7 @@ const TopTitleInput = styled.input`
     border-color: #838383;
     background: #FFEE90;
     width: ${prop=>prop.line};
+    font-size: 16px;
 `
 
 const Mid = styled.div`
@@ -63,7 +64,7 @@ const ButtonText = styled.text`
 //props
 const Form = ({
     margin = "0px",
-    line = "300px",
+    line = "225px",
 }) => {
     return <Cont>
         <Top>
@@ -79,7 +80,7 @@ const Form = ({
         <Mid>
             <TopSec margin={margin}>
                 <TopTitle>MESSAGE *</TopTitle>
-                <TopTitleInput line="650px"></TopTitleInput>
+                <TopTitleInput line="500px"></TopTitleInput>
             </TopSec>
         </Mid>
         <Bot onClick="/">

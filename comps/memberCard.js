@@ -20,8 +20,8 @@ const Top = styled.div`
 `
 
 const MemberImg = styled.img`
-    height: 200px;
-    width: 200px;
+    height: ${prop=>prop.size};
+    width: ${prop=>prop.size};
 `;
 
 const Bot = styled.div`
@@ -49,7 +49,7 @@ const Name = styled.div`
 
 const Title = styled.div`
     font-weight: 500;
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 15px;
 `
 
@@ -68,13 +68,14 @@ const SocialIcon = styled.img`
 //props
 const MemberCard = ({
     name = "Daniel Fu",
-    title = "Back-end Developer",
+    title = "Front-end Developer",
     src = "/daniel.svg",
     color = "#DFEFB9",
+    size = "200px",
 }) => {
     return <Cont>
         <Top color={color}>
-            <MemberImg src={src}></MemberImg>
+            <MemberImg src={src} height={size} width={size}></MemberImg>
         </Top>
         <Bot>
             <Textbox>
@@ -82,7 +83,7 @@ const MemberCard = ({
                 <Title>{title}</Title>
             </Textbox>
             <Icon>
-                <SocialIcon src="/Vector.svg"></SocialIcon>
+                <SocialIcon src="/smol_linkedin.svg"></SocialIcon>
                 <SocialIcon src="/Vector.svg"></SocialIcon>
             </Icon>
         </Bot>
