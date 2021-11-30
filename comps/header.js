@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/dist/client/link";
 
 const HeaderUI = styled.div`
   display: flex;
@@ -16,7 +17,6 @@ const HeaderUI = styled.div`
     align-items: flex-start;
   }
 `;
-
 const ContainerUI = styled.div`
   width: 80%;
   align-items: center;
@@ -27,30 +27,24 @@ const ContainerUI = styled.div`
     flex-direction: column;
   }
 `;
-
 const Icon = styled.div`
   flex-grow: 10;
 `;
-
 const LinkContainer = styled.div`
   display: flex;
   font-family: Poppins;
   flex-grow: 1;
 `;
-
-
 const Text = styled.p`
   margin-right: 50px;
   color:${props=>props.color};
 `;
-
 const RightHeader = styled.div`
   flex-grow: 4;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 `;
-
 const MarginLeft = styled.div`
   margin-left: 40px;
 `;
@@ -63,32 +57,48 @@ export const Header = ({
       <ContainerUI>
 
         <Icon>
-          
+          <Link href="/">
             <img style={{ cursor: "pointer" }} height="46px" src="/Group 75.svg" />
-          
+          </Link>
         </Icon>
 
       <LinkContainer>
-
+      <Link href="/">
         <Text style={{cursor: "pointer"}} color={color}>Home</Text>
+      </Link>
+
+      <Link href="/progress">
         <Text style={{cursor: "pointer"}} color={color}>Progress</Text>
+      </Link>
+
+      <Link href="/reshareTeam">
         <Text style={{cursor: "pointer"}} color={color}>Reshare Team</Text>
+      </Link>
+
+      <Link href="/marketing">
         <Text style={{cursor: "pointer"}} color={color}>Marketing</Text>
+      </Link>
 
       </LinkContainer>
 
       <RightHeader>
 
         <MarginLeft>
+          <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Group-1.svg" />
+          </Link>
         </MarginLeft>
 
         <MarginLeft>
+          <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Vector.svg" />
+          </Link>
         </MarginLeft>
 
         <MarginLeft>
+          <Link href="/">
           <img style={{cursor: "pointer"}} height="24px" src="Group.svg" />
+          </Link>
         </MarginLeft>
 
       </RightHeader>
