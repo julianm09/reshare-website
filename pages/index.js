@@ -90,7 +90,7 @@ const ProgressContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  max-height: 1024px;
+  height: 1024px;
   /* background-color: #F3F3F3; */
   
   @media (max-width:950px) {
@@ -131,7 +131,8 @@ const ReshareParagraph = styled.p`
 const ProgressImage = styled.div`
   display: flex;
   flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 `;
 //--------- Progress Container End ---------
 
@@ -299,7 +300,7 @@ export default function Home() {
     </ProgressReshare>
 
     <ProgressImage>
-      <img src="./MobileApp.png"/>
+      <img src="./MobileApp.svg"/>
     </ProgressImage>
   </ProgressContainer>
 
@@ -410,7 +411,7 @@ export default function Home() {
   </ProcessContainer>
 
   <Arrow>
-      <img marginBottom="10px" height="25px" src="./Arrow.svg"/>
+      <img height="25px" src="./Arrow.svg"/>
   </Arrow>
 
   </ContainerUI>

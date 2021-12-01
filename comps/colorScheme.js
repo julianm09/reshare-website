@@ -8,6 +8,7 @@ const Cont = styled.div`
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    margin: 20px;
 `;
 
 const Top = styled.div`
