@@ -5,7 +5,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../comps/header";
 import MemberCard from "../../comps/memberCard";
 import Form from "../../comps/form";
-
+import Ellipse from "../../comps/ellipse"
 
 const ContainerUI = styled.div`
   display: flex;
@@ -15,50 +15,17 @@ const ContainerUI = styled.div`
   font-family: "Poppins", sans-serif;
   width: 100%;
 `;
-const HeaderUI = styled.div`
-  position: relative;
-  margin: 0 0 0 0;
-  color: #484349;
-  font-size: 24px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  margin: 0 0 50px 0;
-`;
 
-const TimelineUI = styled.div`
+const Arrow = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-`;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 40px;
 
-const PostUI = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 0 0 50px 0;
-`;
-
-const TitleUI = styled.div`
-  position: relative;
-  margin: 0 0 0 0;
-  color: #484349;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-`;
-
-const GridUI = styled.div`
-  position: relative;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: 2fr 2fr 2fr;
-  width: 50%;
-  grid-gap: 150px;
-`;
-
-const ImageUI = styled.img`
-  width: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index:1000;
 `;
 
 const AboutCont = styled.div`
@@ -77,23 +44,55 @@ const AboutCont = styled.div`
     width:100vw;
     display: flex;
     justify-content: center;
+
+    @media (max-width:450px) {
+      margin-left: 40px;
+      margin-right: 40px;
+      justify-content: center;
+      text-align: center;
+      width: auto;
+    }
   }
 
   .contactSec{
     margin-left: 130px;
     margin-bottom: 50px;
     display: flex;
+
+    @media (max-width:450px) {
+      margin-left: 0px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  .contactInfo , .icon{
+  .contactInfo{
     margin-left: 50px;
     margin-right: 100px;
     margin-bottom: 50px;
+    @media (max-width:450px) {
+      margin-bottom: 40px;
+      margin-right: 50px;
+    }
+  }
+
+  .icon {
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    @media (max-width:450px) {
+      margin-top: 0px;
+    }
   }
 
   .contactInfoSec{
     display: flex;
     flex-direction: column;
+
+    @media (max-width:450px) {
+      margin-top: 40px;
+    }
   }
 
   .bcit{
@@ -110,6 +109,10 @@ const Title = styled.div`
   color: #848484;
   display: flex;
   justify-content: center;
+
+  @media (max-width:450px) {
+      margin-top: 50px;
+    }
 `
 const Info = styled.div`
   margin-top: 20px;
@@ -119,7 +122,7 @@ const Info = styled.div`
   font-size: 14px;
 `
 
-const SubTitle = styled.div`
+const SubTitle = styled.text`
   width: 610px;
   height: auto;
   font-weight: 500;
@@ -128,6 +131,16 @@ const SubTitle = styled.div`
   margin-left: 130px;
   margin-top: 100px;
   margin-bottom: 30px;
+
+  @media (max-width:450px) {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    font-size: 20px;
+    margin-top: 50px;
+  }
 `
 
 const About = ({}) => {
@@ -138,6 +151,7 @@ const About = ({}) => {
         </Title>
         <div className="info">
           <Info>
+          Reshare’s development team consists of three developers, meet Julian, Michael, and Daniel. While developing Reshare, Julian focused on the front/ back-end and the user interface for customer side. Michael focused on the front/ back-end user interface for the store side. Daniel focused on the map API and the Reshare website. Reshare is currently using React.js and Expo to code, and Vercel to deploy the application.
           </Info>
         </div>
         <div className="memberCard">
@@ -151,7 +165,7 @@ const About = ({}) => {
         </Title>
         <div className="info">
           <Info>
-           
+          Reshare’s design team consists of three designers, meet Juhee, Glian, and Tiffany. While creating the contents and assets for Reshare, the designers went through a design sprint, design drafts, wireframe, low/ medium/ high fidelity prototyping, user testing, style guide, user personas, task models, website, business card, brochure, and tote bag designing. Main tools used includes Figma and Adobe Illustrator. Juhee focused on main design flow of the application. Glian focused on the design and interface of the Reshare website, and Tiffany focused on design and marketing aspects.
           </Info>
         </div>
         <div className="memberCard">
@@ -176,6 +190,9 @@ const About = ({}) => {
             </div>
           </div>        
         </div>
+        <Arrow>
+          <img height="25px" src="./Arrow.svg"/>
+        </Arrow>
       </ContainerUI>
   </AboutCont>
 };
