@@ -114,6 +114,7 @@ const ProgressContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
+    height: 1120px;
   }
 `;
 const ProgressReshare = styled.div`
@@ -195,7 +196,7 @@ const SolutionHow = styled.div`
   z-index:1;
 
   @media (max-width:450px) {
-    margin-left: 0px;
+    margin-left: 30px;
   }
 `;
 const SoltuionHeader = styled.p`
@@ -224,14 +225,21 @@ const SolutionStore = styled.div`
   justify-content: center;
   align-items: center;
   margin:75px;
+  width: 185px;
+  height: 350px;
 
   @media (max-width:950px) {
     margin:10px;
+  
   }
 `;
 const SolutionText = styled.p`
   font-size: 18px;
   color:#A6A6A6;
+
+  @media (max-width:450px) {
+    font-size: 12px;
+  }
 `;
 //---------- Solution Container End --------
 
@@ -246,7 +254,7 @@ const ProcessContainer = styled.div`
   height: 800px;
   /* background-color: #F3F3F3; */
   @media (max-width:450px) {
-    display: none;
+    height: 1300px;
   }
 `;
 const ProcessTimeline = styled.div`
@@ -259,7 +267,7 @@ const ProcessTimeline = styled.div`
   z-index:1;
 
   @media (max-width:450px) {
-    margin-left: 0px;
+    margin-left: 30px;
   }
 `;
 const ProcessHeader = styled.p`
@@ -277,6 +285,14 @@ const TableContainer = styled.div`
   height: 100vh;
   padding: 100px;
   /* background-color: blue; */
+  @media (max-width:450px) {
+    max-width: 450px;
+    height: 1300px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 30px;
+    }
 `;
 const ProcessTable = styled.div`
     display: flex;
@@ -284,17 +300,29 @@ const ProcessTable = styled.div`
     align-items: flex-start;
     flex-direction: column;
     width: 376px;
-    height: ${props=>props.height};
     background-color: white;
+    
+    @media (max-width:450px) {
+      width: 120px;
+      margin-bottom: 30px;
+    }
 `;
 const Title = styled.p`
     font-size: 18px;
     color: #535353;
     font-weight: 500;
     margin-bottom: 30px;
+
+    @media (max-width:450px) {
+      font-size: 15px;
+    }
 `;
 const DashedLine = styled.div`
   margin-right: 20px;
+
+  @media (max-width:450px) {
+      display: none;
+    }
 `;
 
 const ProcessTable2 = styled.div`
@@ -367,17 +395,17 @@ export default function Home() {
 
   <Solutions>
     <SolutionStore>
-      <img width="185px" height="350px" src="./StoreMobile.svg"/>
+      <img width="100%" height="100%" src="./StoreMobile.svg"/>
       <SolutionText>Grocery stores upload photos of ingredients</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="185px" height="350px" src="./CustomerMobile.svg"/>
+      <img width="100%" height="100%" src="./CustomerMobile.svg"/>
       <SolutionText>Customer schedules pickup time</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="185px" height="350px" src="./OrangeMobile.svg"/>
+      <img width="100%" height="100%" src="./OrangeMobile.svg"/>
       <SolutionText>Customer picks up food</SolutionText>
 
     </SolutionStore>
@@ -445,7 +473,8 @@ export default function Home() {
     </DashedLine>
 
     <ProcessTable2>
-      <Title>Design / Validation / Testing / Development week 6 - Final week</Title>
+      <Title>Design / Validation / Testing / Development
+        <br/> week 6 - Final week</Title>
       <Step bgcolor="#FFF3B2" RectangleText="User testing with Lo-Fi prototypes" />
       <Step bgcolor="#FFF3B2" RectangleText="Build pages" marginleft="40px"/>
       <Step bgcolor="#FFF3B2" RectangleText="State management with react context" marginleft="40px"/>

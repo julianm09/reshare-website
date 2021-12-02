@@ -60,7 +60,7 @@ export const Header = ({
 
         <Icon>
           <Link href="/">
-            <img style={{ cursor: "pointer" }} height="100%" width="100%" src="/Reshare.svg" />
+            <img style={{ cursor: "pointer" }} height="100%" width="80px" src="/Reshare.svg" />
           </Link>
         </Icon>
 
