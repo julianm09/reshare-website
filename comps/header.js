@@ -4,17 +4,17 @@ import Link from "next/dist/client/link";
 const HeaderUI = styled.div`
   display: flex;
   height: 100px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   justify-content: center;
   z-index: 10000;
-  align-items: center;
-  z-index: 10000;
   background-color: white;
+  box-shadow: 0px 0px 15px #ccc;
 
   @media (max-width: 800px ){
     padding: 50px 0 0 0;
     align-items: flex-start;
+    height: 200px;
   }
 `;
 const ContainerUI = styled.div`
@@ -32,21 +32,10 @@ const Icon = styled.div`
 `;
 const LinkContainer = styled.div`
   display: flex;
-  font-family: Poppins;
-  flex-grow: 1;
 `;
 const Text = styled.p`
   margin-right: 50px;
   color:${props=>props.color};
-`;
-const RightHeader = styled.div`
-  flex-grow: 4;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-`;
-const MarginLeft = styled.div`
-  margin-left: 40px;
 `;
 
 export const Header = ({
@@ -58,7 +47,7 @@ export const Header = ({
 
         <Icon>
           <Link href="/">
-            <img style={{ cursor: "pointer" }} height="46px" src="/Group 75.svg" />
+            <img style={{ cursor: "pointer" }} height="55px" src="/Reshare.svg" />
           </Link>
         </Icon>
 
@@ -81,27 +70,6 @@ export const Header = ({
 
       </LinkContainer>
 
-      <RightHeader>
-
-        <MarginLeft>
-          <Link href="/">
-          <img style={{cursor: "pointer"}} height="24px" src="Group-1.svg" />
-          </Link>
-        </MarginLeft>
-
-        <MarginLeft>
-          <Link href="/">
-          <img style={{cursor: "pointer"}} height="24px" src="Vector.svg" />
-          </Link>
-        </MarginLeft>
-
-        <MarginLeft>
-          <Link href="/">
-          <img style={{cursor: "pointer"}} height="24px" src="Group.svg" />
-          </Link>
-        </MarginLeft>
-
-      </RightHeader>
 
       </ContainerUI>
     </HeaderUI>

@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import styled from "styled-components";
 import { Header } from "../comps/header";
-import { BaseRouter as Router, Switch, Route } from "next/dist/shared/lib/router/router";
+import { Images } from "../comps/Images";
 
 const HeaderUI = styled.div`
   display: flex;

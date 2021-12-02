@@ -12,7 +12,6 @@ import Member from "../../comps/memberCard"
 import StepsWrapper from "../../comps/StepsWrapper"
 import ColorCard from "../../comps/colorScheme"
 
-
 const ContainerUI = styled.div`
   display: flex;
   flex-direction: column;
