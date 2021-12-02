@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/dist/client/link';
 
 const Cont = styled.div`
     height: 397px;
@@ -50,7 +51,7 @@ const Name = styled.div`
 const Title = styled.div`
     font-weight: 500;
     font-size: 11px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 `
 
 const Icon = styled.div`
@@ -72,6 +73,8 @@ const MemberCard = ({
     src = "/daniel.svg",
     color = "#DFEFB9",
     size = "200px",
+    linkin = "https://www.linkedin.com/in/danielfu-/",
+    ig = "https://www.instagram.com/daniel_fu/",
 }) => {
     return <Cont>
         <Top color={color}>
@@ -83,8 +86,16 @@ const MemberCard = ({
                 <Title>{title}</Title>
             </Textbox>
             <Icon>
-                <SocialIcon src="/smol_linkedin.svg"></SocialIcon>
-                <SocialIcon src="/Vector.svg"></SocialIcon>
+                <Link href={linkin}>
+                    <a target="_blank">
+                        <SocialIcon src="/smol_linkedin.svg"></SocialIcon>
+                    </a>
+                </Link>
+                <Link href={ig}>
+                    <a target="_blank">
+                        <SocialIcon src="/Vector.svg"></SocialIcon>
+                    </a>
+                </Link>
             </Icon>
         </Bot>
     </Cont>

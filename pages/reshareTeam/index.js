@@ -5,7 +5,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../comps/header";
 import MemberCard from "../../comps/memberCard";
 import Form from "../../comps/form";
-import Ellipse from "../../comps/ellipse"
+import Ellipse from "../../comps/ellipse";
 
 const ContainerUI = styled.div`
   display: flex;
@@ -155,8 +155,8 @@ const About = ({}) => {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Julian Mayes" title="Project manager + Lead Developer" src="/Julian.svg" size="250px"/>
-          <MemberCard name="Michael Trinh" title="Project manager + Front-end Developer" src="/Michael.svg"/>
+          <MemberCard name="Julian Mayes" title="Project manager + Lead Developer" src="/Julian.svg" size="250px" linkin="https://www.linkedin.com/in/julian-mayes-b27898134/" ig="https://www.instagram.com/julianmayes.dev/"/>
+          <MemberCard name="Michael Trinh" title="Project manager + Front-end Developer" src="/Michael.svg" linkin="https://www.linkedin.com/in/michael-trinh-5558a71ba/" ig="https://www.instagram.com/michaelmikyle/"/>
           <MemberCard/>
         </div>
 
@@ -169,9 +169,9 @@ const About = ({}) => {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Juhee Kim" title="Lead Designer + UI/UX Designer" src="/Juhee.svg" color="#EE9837"/>
+          <MemberCard name="Juhee Kim" title="Lead Designer + UI/UX Designer" src="/Juhee.svg" color="#EE9837" linkin="https://www.linkedin.com/in/juhee-kim-10771a1b1/" ig="https://www.instagram.com/juheekimdesign/"/>
           <MemberCard name="Glian Palma" title="UI/UX Designer + Front-end Develper" src="/Glian.svg" color="#EE9837" size="220px"/>
-          <MemberCard name="Tiffany Tu" title="UI/UX Designer + Marketer" src="/Tiffany.svg" color="#EE9837"/>
+          <MemberCard name="Tiffany Tu" title="UI/UX Designer + Marketer" src="/Tiffany.svg" color="#EE9837" ig="https://www.instagram.com/tiff_tu/" linkin="https://www.linkedin.com/in/tiffany-t-334858188/"/>
         </div>
 
         <SubTitle>Want to get started?</SubTitle>
@@ -190,9 +190,9 @@ const About = ({}) => {
             </div>
           </div>        
         </div>
-        <Arrow>
+        {/* <Arrow>
           <img height="25px" src="./Arrow.svg"/>
-        </Arrow>
+        </Arrow> */}
       </ContainerUI>
   </AboutCont>
 };
