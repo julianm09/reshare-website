@@ -22,7 +22,7 @@ const ContainerUI = styled.div`
   height: 100%;
   background-color:white;
 
-  @media (width:450px) {
+  @media (max-width:450px) {
     margin-left: 250px;
 }
 `;
