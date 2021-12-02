@@ -625,17 +625,17 @@ export default function Home() {
 
   <Solutions>
     <SolutionStore>
-      <img width="185px" height="350px" src="./StoreMobile.svg"/>
+      <img width="100%" height="100%" src="./StoreMobile.svg"/>
       <SolutionText>Grocery stores upload photos of ingredients</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="185px" height="350px" src="./CustomerMobile.svg"/>
+      <img width="100%" height="100%" src="./CustomerMobile.svg"/>
       <SolutionText>Customer schedules pickup time</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="185px" height="350px" src="./OrangeMobile.svg"/>
+      <img width="100%" height="100%" src="./OrangeMobile.svg"/>
       <SolutionText>Customer picks up food</SolutionText>
 
     </SolutionStore>
