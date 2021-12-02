@@ -12,9 +12,9 @@ const HeaderUI = styled.div`
   box-shadow: 0px 0px 15px #ccc;
 
   @media (max-width: 800px ){
-    padding: 50px 0 0 0;
+    padding: 20px 0 0 0;
     align-items: flex-start;
-    height: 200px;
+    height: 120px;
   }
   @media (max-width:450px){
     width: 100%;
@@ -32,6 +32,12 @@ const ContainerUI = styled.div`
 `;
 const Icon = styled.div`
   flex-grow: 10;
+  width: 55px;
+  height: 55px;
+  @media (max-width:450px) {
+    width: 45px;
+    height: 45px;
+  }
 `;
 const LinkContainer = styled.div`
   display: flex;
@@ -39,6 +45,10 @@ const LinkContainer = styled.div`
 const Text = styled.p`
   margin-right: 50px;
   color:${props=>props.color};
+  @media (max-width:450px) {
+    margin-right: 20px;
+    font-size:14px;
+  }
 `;
 
 export const Header = ({
@@ -50,7 +60,7 @@ export const Header = ({
 
         <Icon>
           <Link href="/">
-            <img style={{ cursor: "pointer" }} height="55px" src="/Reshare.svg" />
+            <img style={{ cursor: "pointer" }} height="100%" width="100%" src="/Reshare.svg" />
           </Link>
         </Icon>
 

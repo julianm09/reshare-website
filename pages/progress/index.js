@@ -20,6 +20,10 @@ const ContainerUI = styled.div`
   margin: 0;
   padding: 0;
   background-color:white;
+
+  @media (max-width:450px) {
+    margin-left: 250px;
+}
 `;
 
 const Arrow = styled.div`
@@ -32,6 +36,10 @@ const Arrow = styled.div`
   width: 100vw;
   height: 100vh;
   z-index:1000;
+
+  @media (max-width:450px) {
+    height: 90%;
+  }
 `;
 
 //------- Progess Container --------
@@ -100,6 +108,10 @@ const SolutionContainer = styled.div`
 const SolutionCircle = styled.div`
   position: absolute;
   z-index:0;
+
+  @media (max-width:450px) {
+    display: none;
+  }
 `;
 const SolutionHow = styled.div`
   display: flex;
@@ -109,6 +121,10 @@ const SolutionHow = styled.div`
   margin-left: 150px;
   color: #EE9837;
   z-index:1;
+
+  @media (max-width:450px) {
+    margin-left: 0px;
+  }
 `;
 const SoltuionHeader = styled.p`
   color: #EE9837;
@@ -125,7 +141,9 @@ const Solutions = styled.div`
   z-index: 1;
 
   @media (max-width:950px) {
-    flex-direction: column;  }
+    flex-direction: row;  }
+    @media (max-width:950px) {
+    flex-direction: row;  }
 `;
 const SolutionStore = styled.div`
   display:flex ;
@@ -163,6 +181,10 @@ const ProcessTimeline = styled.div`
   margin-left: 150px;
   color: #EE9837;
   z-index:1;
+
+  @media (max-width:450px) {
+    margin-left: 0px;
+  }
 `;
 const ProcessHeader = styled.p`
   color: #EE9837;
@@ -228,6 +250,10 @@ const ProfileTarget = styled.div`
   margin-left: 150px;
   color: #EE9837;
   z-index:1;
+
+  @media (max-width:450px) {
+    margin-left: 0px;
+  }
 `;
 
 const ProfileHeader = styled.p`

@@ -23,7 +23,6 @@ const ContainerUI = styled.div`
   background-color:white;
 
   @media (max-width:450px) {
-    margin-left: 250px;
 }
 `;
 
@@ -79,6 +78,10 @@ const ReshareTitle = styled.p`
   font-family: poppins;
   font-size: 100px;
   z-index:2;
+
+  @media (max-width:450px) {
+    font-size: 80px;
+  }
 `;
 //------- Landing Page End --------
 
@@ -142,6 +145,8 @@ const ReshareParagraph = styled.p`
   font-size: 14px;
   width: 387px;
 
+  @media (max-width:450px) {
+  }
   
 `;
 const ProgressImage = styled.div`
@@ -149,6 +154,12 @@ const ProgressImage = styled.div`
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  
+  @media (max-width:450px) {
+    margin-top: 130px;
+    max-width: 450px;
+    overflow: hidden;
+  }
 `;
 //--------- Progress Container End ---------
 
@@ -161,6 +172,10 @@ const SolutionContainer = styled.div`
   justify-content: flex-start;
   width: 100vw;
   height: 1024px;
+
+  @media (max-width:450px) {
+    overflow: hidden;
+  }
 `;
 const SolutionCircle = styled.div`
   position: absolute;
@@ -230,6 +245,9 @@ const ProcessContainer = styled.div`
   width: 100vw;
   height: 800px;
   /* background-color: #F3F3F3; */
+  @media (max-width:450px) {
+    display: none;
+  }
 `;
 const ProcessTimeline = styled.div`
   display: flex;
