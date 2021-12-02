@@ -30,7 +30,7 @@ const Top = styled.div`
 `
 
 const TopSec = styled.div`
-    margin-right: ${prop=>prop.margin};
+    margin-right: ${prop=>prop.marginR};
 `
 
 const TopTitle = styled.div`
@@ -63,7 +63,7 @@ const Mid = styled.div`
 `
 
 const MidSec = styled.div`
-    margin-right: ${prop=>prop.margin};
+    margin-right: ${prop=>prop.marginR};
 `
 
 const MidTitle = styled.div`
@@ -100,22 +100,22 @@ const ButtonText = styled.text`
 
 //props
 const Form = ({
-    margin = "0px",
+    marginR = "0px",
     line = "225px",
 }) => {
     return <Cont>
         <Top>
-            <TopSec margin="50px">
+            <TopSec marginR="50px">
                 <TopTitle>NAME *</TopTitle>
                 <TopTitleInput line={line}></TopTitleInput>
             </TopSec>
-            <TopSec margin={margin}>
+            <TopSec marginR="50px">
                 <TopTitle>E-MAIL *</TopTitle>
                 <TopTitleInput line={line}></TopTitleInput>
             </TopSec>
         </Top>
         <Mid>
-            <MidSec margin={margin}>
+            <MidSec marginR={marginR}>
                 <MidTitle>MESSAGE *</MidTitle>
                 <MidTitleInput line="225px"></MidTitleInput>
             </MidSec>
