@@ -21,9 +21,6 @@ const ContainerUI = styled.div`
   padding: 0;
   background-color:white;
 
-  @media (max-width:450px) {
-    margin-left: 250px;
-}
 `;
 
 const Arrow = styled.div`
@@ -54,6 +51,10 @@ const ProgressContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
+  }
+  @media (max-width:950px) {
+    flex-direction: column;
+    height: 1120px;
   }
 `;
 const ProgressReshare = styled.div`
@@ -92,6 +93,12 @@ const ProgressImage = styled.div`
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+
+  @media (max-width:450px) {
+    margin-top: 130px;
+    max-width: 450px;
+    overflow: hidden;
+  }
 `;
 //--------- Progress Container End ---------
 
@@ -104,6 +111,10 @@ const SolutionContainer = styled.div`
   justify-content: flex-start;
   width: 100vw;
   height: 1024px;
+
+  @media (max-width:450px) {
+    overflow: hidden;
+  }
 `;
 const SolutionCircle = styled.div`
   position: absolute;
@@ -123,7 +134,7 @@ const SolutionHow = styled.div`
   z-index:1;
 
   @media (max-width:450px) {
-    margin-left: 0px;
+    margin-left: 30px;
   }
 `;
 const SoltuionHeader = styled.p`
@@ -159,6 +170,10 @@ const SolutionStore = styled.div`
 const SolutionText = styled.p`
   font-size: 18px;
   color:#A6A6A6;
+
+  @media (max-width:450px) {
+    font-size: 12px;
+  }
 `;
 //---------- Solution Container End --------
 
@@ -172,6 +187,9 @@ const ProcessContainer = styled.div`
   width: 100vw;
   height: 800px;
   /* background-color: #F3F3F3; */
+  @media (max-width:450px) {
+    height: 1300px;
+  }
 `;
 const ProcessTimeline = styled.div`
   display: flex;
@@ -183,7 +201,7 @@ const ProcessTimeline = styled.div`
   z-index:1;
 
   @media (max-width:450px) {
-    margin-left: 0px;
+    margin-left: 30px;
   }
 `;
 const ProcessHeader = styled.p`
@@ -201,6 +219,14 @@ const TableContainer = styled.div`
   height: 100vh;
   padding: 100px;
   /* background-color: blue; */
+  @media (max-width:450px) {
+    max-width: 450px;
+    height: 1300px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 30px;
+    }
 `;
 const ProcessTable = styled.div`
     display: flex;
@@ -210,15 +236,28 @@ const ProcessTable = styled.div`
     width: 376px;
     height: ${props=>props.height};
     background-color: white;
+
+    @media (max-width:450px) {
+      width: 120px;
+      margin-bottom: 30px;
+    }
 `;
 const Title = styled.p`
     font-size: 18px;
     color: #535353;
     font-weight: 500;
     margin-bottom: 30px;
+
+    @media (max-width:450px) {
+      font-size: 15px;
+    }
 `;
 const DashedLine = styled.div`
   margin-right: 20px;
+
+  @media (max-width:450px) {
+      display: none;
+    }
 `;
 const ProcessTable2 = styled.div`
     display: flex;
@@ -240,6 +279,9 @@ const ProfileContainer = styled.div`
   width: 100vw;
   height: 1024px;
   /* background-color: #F3F3F3; */
+  @media (max-width:450px) {
+      height: 1100px;
+    }
 `;
 
 const ProfileTarget = styled.div`
@@ -252,7 +294,7 @@ const ProfileTarget = styled.div`
   z-index:1;
 
   @media (max-width:450px) {
-    margin-left: 0px;
+    margin-left: 30px;
   }
 `;
 
@@ -272,6 +314,7 @@ const PersonaContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
+    margin-left: 30px;
   }
 `;
 //--------- User Profile End ---------
@@ -326,6 +369,10 @@ const StyleguideContainer = styled.div`
   width: 100vw;
   height: 1024px;
   background-color: #F3F3F3;
+  
+  @media (max-width:450px) {
+    flex-direction: column;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -336,6 +383,11 @@ const TextContainer = styled.div`
   width: 50%;
   height: 100%;
   background-color: #FFF9EE;
+
+  @media (max-width:450px) {
+    padding: 0px;
+    width: 100%;
+}
 `;
 
 const ImageContainer = styled.div`
@@ -347,6 +399,10 @@ const ImageContainer = styled.div`
   height: 100%;
   flex-grow: 1;
   background-color: white;
+
+  @media (max-width:450px) {
+    width: 100%;
+    }
 `;
 
 const StyleGuideTitle = styled.div`
@@ -356,6 +412,10 @@ const StyleGuideTitle = styled.div`
   padding-top: 100px;
   color: #EE9837;
   z-index:1;
+
+  @media (max-width:450px) {
+    margin-left: 30px;
+    }
 `;
 
 const StyleGuideHeader = styled.p`
@@ -363,6 +423,7 @@ const StyleGuideHeader = styled.p`
   font-size: 70px;
   font-weight: 500;
   margin:0 0 50px 0;
+  
 `;
 
 const StyleGuideInfo = styled.div`
@@ -370,21 +431,32 @@ const StyleGuideInfo = styled.div`
   font-size: 14px;
   margin: 0;
   width: 420px;
+  @media (max-width:450px) {
+    margin-left: 30px;
+    }
 `;
 //---------- StyleGuide End ------------
 
 //----------Typography Container ----------
 const TypographyContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   width: 100vw;
   height: 1024px;
   background-color: #EE9837;
 
+  @media (max-width:450px) {
+    display: none;
+  }
+
 `;
-const TypographyLeftContainer = styled.div`
+const TypoContainers = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+const TypographyTopContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -400,6 +472,7 @@ const TypographyTitle = styled.div`
   padding-top: 100px;
   color: #FFEE90;
   z-index:1;
+  margin-left: 150px;
 `;
 const TypographyHeader = styled.p`
   color: #FFEE90;
@@ -425,30 +498,32 @@ const Letters1 = styled.p`
 const SecondFont = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
 `;
-const Secondary = styled.p`
+const Secondary = styled.div`
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 60px 0;
+  margin-bottom:70px;//
+  color: #FFEE90;
 `;
 
-const TypographyRightContainer = styled.div`
+const Letters2 = styled.div`
+  width: 100%;
+  height: 100px;
+  margin-bottom: 94px;
+`;
+
+const TypographyBottomContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-grow: 1;
   width: 50%;
   height: 100%;
-  flex-grow: 1;
-  padding-top: 280px;
-  padding-right: 100px;
+  color: #FFEE90;
 `;
 const Text = styled.p`
   color: black;
   font-size: 14px;
-  margin-bottom: 220px;
-  z-index:1;
+  margin-right: 30px;
 `;
 //---------- Typography End ----------
 
@@ -460,6 +535,10 @@ const ColorContainer = styled.div`
   justify-content: flex-start;
   width: 100vw;
   height: 1024px;
+
+  @media (max-width:350px) {
+    display: none;
+  }
 `;
 const ColorLeftContainer = styled.div`
   display: flex;
@@ -684,32 +763,39 @@ export default function Home() {
 </div>
 
   <TypographyContainer>
-  <TypographyLeftContainer>
       <TypographyTitle>
         Styleguide
         <TypographyHeader>Typography</TypographyHeader>
       </TypographyTitle>
+
+      <TypoContainers>
+  <TypographyTopContainer>
       
       <FirstFont>
         <Primary>Primary - Poppins</Primary>
         <Letters1>Aa</Letters1>
       </FirstFont>
 
-      <SecondFont>
-        <Secondary>Secondary - Ubuntu</Secondary>
-        <img width="209px" height="123px" src="./Aa.svg"/>
-      </SecondFont>  
-    </TypographyLeftContainer>
-
-    <TypographyRightContainer>
       <Text>
       Geometric sans serif typefaces have been a popular design tool ever since these actors took to the world’s stage. Poppins is one of the new comers to this long tradition. With support for the Devanagari and Latin writing systems, it is an internationalist take on the genre.
       </Text>
+    </TypographyTopContainer>
+    <TypographyBottomContainer>
+
+      <SecondFont>
+        <Secondary>Secondary - Ubuntu</Secondary>
+        <Letters2>
+        <img width="190px" height="100px" src="./Aa.svg"/>
+        </Letters2>
+      </SecondFont>  
+
       <Text>
       The Ubuntu Font Family are a set of matching new libre/open fonts in development during 2010-2011. The development is being funded by Canonical Ltd on behalf the wider Free Software community and the Ubuntu project. The technical font design work and implementation is being undertaken by Dalton Maag.
       </Text>
 
-    </TypographyRightContainer>
+    </TypographyBottomContainer>
+
+      </TypoContainers>
   </TypographyContainer>
 
   <ColorContainer>
