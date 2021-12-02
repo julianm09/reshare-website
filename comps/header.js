@@ -16,7 +16,7 @@ const HeaderUI = styled.div`
     align-items: flex-start;
     height: 200px;
   }
-  @media (max-width:375px){
+  @media (max-width:450px){
     width: 100%;
   }
 `;
