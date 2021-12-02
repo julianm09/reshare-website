@@ -10,8 +10,7 @@ import LandingPage from "../../comps/LandingPage"
 import Step from "../../comps/Steps.js"
 import Member from "../../comps/memberCard"
 import StepsWrapper from "../../comps/StepsWrapper"
-
-
+import ColorCard from "../../comps/colorScheme"
 
 const ContainerUI = styled.div`
   display: flex;
@@ -22,53 +21,6 @@ const ContainerUI = styled.div`
   padding: 0;
   background-color:white;
 `;
-
-//------- Landing Page -------
-const LandingPageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 1024px;
-`;
-const Circle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 503px;
-  height: 503px;
-  border-radius: 300px;
-  background-color: #DFEFB9;
-  z-index: 0;
-`;
-const Lime = styled.div`
-  position: absolute;
-  margin-left: -400px;
-  margin-bottom: 50px;
-  z-index: 1;
-
-  @media (max-width:950px){
-    display: none;
-  }
-`;
-const Orange = styled.div`
-  position: absolute;
-  margin-left: 300px;
-  margin-bottom:-400px;
-  z-index: 1;
-
-  @media (max-width: 950px ){
-    display: none;
-  }
-`;
-const ReshareTitle = styled.p`
-  color: white;
-  font-weight: 500;
-  font-family: poppins;
-  font-size: 100px;
-  z-index:2;
-`;
-//------- Landing Page End --------
 
 const Arrow = styled.div`
   display: flex;
@@ -82,7 +34,6 @@ const Arrow = styled.div`
   z-index:1000;
 `;
 
-
 //------- Progess Container --------
 const ProgressContainer = styled.div`
   display: flex;
@@ -90,7 +41,7 @@ const ProgressContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  max-height: 1024px;
+  height: 1024px;
   /* background-color: #F3F3F3; */
   
   @media (max-width:950px) {
@@ -131,7 +82,8 @@ const ReshareParagraph = styled.p`
 const ProgressImage = styled.div`
   display: flex;
   flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 `;
 //--------- Progress Container End ---------
 
@@ -246,7 +198,6 @@ const Title = styled.p`
 const DashedLine = styled.div`
   margin-right: 20px;
 `;
-
 const ProcessTable2 = styled.div`
     display: flex;
     justify-content: flex-start;
@@ -266,7 +217,7 @@ const ProfileContainer = styled.div`
   justify-content: flex-start;
   width: 100vw;
   height: 1024px;
-  background-color: #F3F3F3;
+  /* background-color: #F3F3F3; */
 `;
 
 const ProfileTarget = styled.div`
@@ -292,9 +243,239 @@ const PersonaContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
+  
+  @media (max-width:950px) {
+    flex-direction: column;
+  }
+`;
+//--------- User Profile End ---------
+
+//--------- Low Fidelity -------------
+const LowFidelityContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top:30px;
+  width: 100vw;
+  height: 1150px;
+  background-color: #3C362A;
+
+  @media (max-width:1000px) {
+    display: none;
+  }
 `;
 
+const LowFidelityTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* margin-top: 100px; */
+  margin-left: 150px;
+  color: #EE9837;
+  z-index:1;
+`;
 
+const LowFidelityHeader = styled.p`
+  color: #EE9837;
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0;
+`;
+
+const LoFi = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+`;
+//--------- LoFi Container End ----------
+
+//--------- Style Guide Container ---------
+const StyleguideContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 1024px;
+  background-color: #F3F3F3;
+`;
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 150px;
+  width: 50%;
+  height: 100%;
+  background-color: #FFF9EE;
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  flex-grow: 1;
+  background-color: white;
+`;
+
+const StyleGuideTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+  color: #EE9837;
+  z-index:1;
+`;
+
+const StyleGuideHeader = styled.p`
+  color: #EE9837;
+  font-size: 70px;
+  font-weight: 500;
+  margin:0 0 50px 0;
+`;
+
+const StyleGuideInfo = styled.div`
+  color: #262626;
+  font-size: 14px;
+  margin: 0;
+  width: 420px;
+`;
+//---------- StyleGuide End ------------
+
+//----------Typography Container ----------
+const TypographyContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 1024px;
+  background-color: #EE9837;
+
+`;
+const TypographyLeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 150px;
+  width: 50%;
+  height: 100%;
+  color: #FFEE90;
+`;
+const TypographyTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+  color: #FFEE90;
+  z-index:1;
+`;
+const TypographyHeader = styled.p`
+  color: #FFEE90;
+  font-size: 70px;
+  font-weight: 500;
+  margin:0 0 50px 0;
+`;
+const FirstFont = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+`;
+const Primary = styled.p`
+  font-size: 30px;
+  font-weight: 500;
+  margin:0;
+`;
+const Letters1 = styled.p`
+  font-size: 144px;
+  font-weight: 700;
+  margin: 0;
+`;
+const SecondFont = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+`;
+const Secondary = styled.p`
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 0 60px 0;
+`;
+
+const TypographyRightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  height: 100%;
+  flex-grow: 1;
+  padding-top: 280px;
+  padding-right: 100px;
+`;
+const Text = styled.p`
+  color: black;
+  font-size: 14px;
+  margin-bottom: 220px;
+  z-index:1;
+`;
+//---------- Typography End ----------
+
+//---------- Color Container --------
+const ColorContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 1024px;
+`;
+const ColorLeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 150px;
+  width: 50%;
+  height: 100%;
+`;
+const ColorTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+  color: #EE9837;
+  z-index:1;
+`;
+const ColorHeader = styled.p`
+  color: #EE9837;
+  font-size: 70px;
+  font-weight: 500;
+  margin:0 0 50px 0;
+`;
+const ColorInfo = styled.div`
+  color: #262626;
+  font-size: 18px;
+  margin: 0;
+  width: 350px;
+`;
+const ColorRightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+`;
+const ColorRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+//---------- Color End -----------
 
 export default function Home() {
 
@@ -302,7 +483,7 @@ export default function Home() {
   
   return (
   <ContainerUI>
-
+<div>
   <ProgressContainer>
     <ProgressReshare>
       <Hashtag>#foodwaste</Hashtag>
@@ -321,7 +502,7 @@ export default function Home() {
     </ProgressReshare>
 
     <ProgressImage>
-      <img src="./MobileApp.png"/>
+      <img width="700px" src="./MobileApp.svg"/>
     </ProgressImage>
   </ProgressContainer>
 
@@ -439,9 +620,122 @@ export default function Home() {
 
     <PersonaContainer>
       <Persona/>
-      <Persona/>
+      <Persona src="./Janeth.png" name="Janeth Guzman" age="22" occupation="Administrative Associate" income="$60,000 / Year" bio="Janeth is a single mother of two children and works full time at a health tech company downtown. She loves to stay active and healthy when she can, and wants the same for her kids. Janeth enjoys staying active by going on hikes and riding her bike on the weekend. It is very important for Janeth to eat high quality produce but finds that sometimes it can get a little expensive. She is very concious about food waste, so she cooks little by little every day."/>
     </PersonaContainer>
   </ProfileContainer>
+
+  <LowFidelityContainer>
+    <LowFidelityTitle>
+      Prototypes process
+      <LowFidelityHeader>Low Fidelity Prototype</LowFidelityHeader>
+    </LowFidelityTitle>
+    <LoFi>
+      <img width="1100px" height="942px" src="./lofi.png"/>
+    </LoFi>
+  </LowFidelityContainer>
+
+  <StyleguideContainer>
+    <TextContainer>
+      <StyleGuideTitle>
+        Styleguide
+        <StyleGuideHeader>Logo</StyleGuideHeader>
+      </StyleGuideTitle>
+
+      <StyleGuideInfo>
+      ReShare’s logo represents the cycle of reusing. The lifecycle of fresh foods is often very short and we wanted to show a way to upcycle food to benifit low income individuals and families. 
+      <br/>
+      <br/>
+      The R in the reshare logo.
+      <br/> 
+      The Reuse, Reduce Recycle arrow direction.
+      </StyleGuideInfo> 
+    </TextContainer>
+
+    <ImageContainer>
+      <img width="457px" height="578px" src="./Logos.svg"/>
+    </ImageContainer>
+  </StyleguideContainer>
+</div>
+
+  <TypographyContainer>
+  <TypographyLeftContainer>
+      <TypographyTitle>
+        Styleguide
+        <TypographyHeader>Typography</TypographyHeader>
+      </TypographyTitle>
+      
+      <FirstFont>
+        <Primary>Primary - Poppins</Primary>
+        <Letters1>Aa</Letters1>
+      </FirstFont>
+
+      <SecondFont>
+        <Secondary>Secondary - Ubuntu</Secondary>
+        <img width="209px" height="123px" src="./Aa.svg"/>
+      </SecondFont>  
+    </TypographyLeftContainer>
+
+    <TypographyRightContainer>
+      <Text>
+      Geometric sans serif typefaces have been a popular design tool ever since these actors took to the world’s stage. Poppins is one of the new comers to this long tradition. With support for the Devanagari and Latin writing systems, it is an internationalist take on the genre.
+      </Text>
+      <Text>
+      The Ubuntu Font Family are a set of matching new libre/open fonts in development during 2010-2011. The development is being funded by Canonical Ltd on behalf the wider Free Software community and the Ubuntu project. The technical font design work and implementation is being undertaken by Dalton Maag.
+      </Text>
+
+    </TypographyRightContainer>
+  </TypographyContainer>
+
+  <ColorContainer>
+    <ColorLeftContainer>
+    <ColorTitle>
+      Styleguide
+      <ColorHeader>Primary Color</ColorHeader>
+    </ColorTitle>
+    <ColorInfo>ReShare’s colour pallete represents and promotes freshness by giving foods a new life. We went with a fun, fresh, and bright primary colour scheme. 
+<br/>
+<br/>
+The two tones of green means freshness, growth, and health.
+<br/>
+<br/>
+The orange and yellow means joy, happiness, and creativity. 
+</ColorInfo>
+    </ColorLeftContainer>
+
+    <ColorRightContainer>
+      <ColorRow>
+        <ColorCard/>
+        <ColorCard color="#FFEE90" title="~ Yellow Crayola" hexNumber="#FFEE90" R="255" G="238" B="144"/>
+      </ColorRow>
+      <ColorRow>
+        <ColorCard color="#EE9837" title="~ Carrot Orange" hexNumber="#EE9837" R="238" G="152" B="55"/>
+        <ColorCard color="#57BA68" title="~ Tea Green" hexNumber="#57BA68" R="87" G="186" B="104"/>
+      </ColorRow>
+    </ColorRightContainer>
+  </ColorContainer>
+
+  <ColorContainer>
+    <ColorLeftContainer>
+    <ColorTitle>
+      Styleguide
+      <ColorHeader>Secondary Color</ColorHeader>
+    </ColorTitle>
+    <ColorInfo>
+      For secondary colors, Reshare chose similar colors as primary colors. But, secondary colors are more faded and less saturated compared to the primary colors. It helps us utilize and arrange secondary colors with the primary colors in a proper way. 
+</ColorInfo>
+    </ColorLeftContainer>
+
+    <ColorRightContainer>
+      <ColorRow>
+        <ColorCard color="#FFC696" title="~ Peach Crayola" hexNumber="#FFC696" R="250" G="198" B="150"/>
+        <ColorCard color="#ECEEF4" title="~ Alice Blue" hexNumber="#ECEEF4" R="236" G="238" B="244"/>
+      </ColorRow>
+      <ColorRow>
+        <ColorCard color="#F2BCBC" title="~ Spanish Pink" hexNumber="#F2BCBC" R="242" G="188" B="188"/>
+        <ColorCard color="#FDE9C2" title="~ Blanched Almond" hexNumber="#FDE9C2" R="253" G="233" B="194"/>
+      </ColorRow>
+    </ColorRightContainer>
+  </ColorContainer>
 
   <Arrow>
       <img height="25px" src="./Arrow.svg"/>
