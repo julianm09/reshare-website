@@ -9,6 +9,9 @@ const Cont = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    @media (max-width:450px) {
+        margin: 10px;
+    }
 
 `;
 const Top = styled.div`
