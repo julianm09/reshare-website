@@ -21,6 +21,10 @@ const ContainerUI = styled.div`
   padding: 0;
   height: 100%;
   background-color:white;
+
+  @media (width:375px) {
+    margin-left: 250px;
+}
 `;
 
 //------- Landing Page -------
@@ -30,6 +34,9 @@ const LandingPageContainer = styled.div`
   justify-content: center;
   width: 100vw;
   height: 1024px;
+  @media (max-width:375px) {
+      
+  }
 `;
 const Circle = styled.div`
   display: flex;
@@ -40,6 +47,11 @@ const Circle = styled.div`
   border-radius: 300px;
   background-color: #DFEFB9;
   z-index: 0;
+
+  @media (max-width:375px) {
+    width: 375px;
+    height: 375px;
+  }
 `;
 const Lime = styled.div`
   position: absolute;
@@ -80,6 +92,10 @@ const Arrow = styled.div`
   width: 100vw;
   height: 100vh;
   z-index:1000;
+
+  @media (max-width:375px) {
+    height: 90%;
+  }
 `;
 
 
@@ -149,6 +165,10 @@ const SolutionContainer = styled.div`
 const SolutionCircle = styled.div`
   position: absolute;
   z-index:0;
+
+  @media (max-width:375px) {
+    display: none;
+  }
 `;
 const SolutionHow = styled.div`
   display: flex;
@@ -158,12 +178,19 @@ const SolutionHow = styled.div`
   margin-left: 150px;
   color: #EE9837;
   z-index:1;
+
+  @media (max-width:375px) {
+    margin-left: 0px;
+  }
 `;
 const SoltuionHeader = styled.p`
   color: #EE9837;
   font-size: 70px;
   font-weight: 500;
   margin: 0;
+
+  @media (max-width:375px) {
+  }
 `;
 const Solutions = styled.div`
   display: flex;
@@ -174,7 +201,7 @@ const Solutions = styled.div`
   z-index: 1;
 
   @media (max-width:950px) {
-    flex-direction: column;  }
+    flex-direction: row;  }
 `;
 const SolutionStore = styled.div`
   display:flex ;
@@ -212,6 +239,10 @@ const ProcessTimeline = styled.div`
   margin-left: 150px;
   color: #EE9837;
   z-index:1;
+
+  @media (max-width:375px) {
+    margin-left: 0px;
+  }
 `;
 const ProcessHeader = styled.p`
   color: #EE9837;
