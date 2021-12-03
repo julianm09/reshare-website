@@ -16,7 +16,7 @@ const ContainerUI = styled.div`
   width: 100%;
 
   @media (max-width:450px){
-    padding-top: 200px;
+    padding-top: 130px;
   }
 `;
 

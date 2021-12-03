@@ -16,6 +16,7 @@ const ContainerUI = styled.div`
   padding: 0;
   height: 100%;
   background-color:white;
+
 `;
 
 const Arrow = styled.div`

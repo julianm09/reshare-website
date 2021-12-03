@@ -16,6 +16,9 @@ const ContainerUI = styled.div`
   padding: 0;
   height: 100%;
   background-color:white;
+  @media (max-width:450px){
+    padding-top: 60px;
+  }
 `;
 
 //------- Marketing Container -------

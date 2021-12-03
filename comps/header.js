@@ -27,12 +27,17 @@ const ContainerUI = styled.div`
   @media (max-width: 950px ){
     flex-direction: column;
   }
+
+  @media (max-width:450px) {
+    justify-content: center;
+  }
 `;
 const Icon = styled.div`
   flex-grow: 10;
   width: 55px;
   height: 55px;
   @media (max-width:450px) {
+    
     width: 45px;
     height: 45px;
   }
@@ -58,7 +63,7 @@ export const Header = ({
 
         <Icon>
           <Link href="/">
-            <img style={{ cursor: "pointer" }} height="100%" width="80px" src="/Reshare.svg" />
+            <img style={{ cursor: "pointer" }} height="100%" width="100%" src="/Reshare.svg" />
           </Link>
         </Icon>
 
@@ -72,13 +77,12 @@ export const Header = ({
       </Link>
 
       <Link href="/reshareTeam">
-        <Text style={{cursor: "pointer"}} color={color}>Reshare Team</Text>
+        <Text style={{cursor: "pointer"}} color={color}>Team</Text>
       </Link>
 
       <Link href="/marketing">
         <Text style={{cursor: "pointer"}} color={color}>Marketing</Text>
       </Link>
-
       </LinkContainer>
 
 
