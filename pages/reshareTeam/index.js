@@ -4,8 +4,8 @@ import { postQuery } from "../../lib/sanity/postQuery";
 import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../comps/header";
 import MemberCard from "../../comps/memberCard";
-import Form from "../../comps/form";
 import Ellipse from "../../comps/ellipse";
+import Email from "../../comps/email";
 
 const ContainerUI = styled.div`
   display: flex;
@@ -54,35 +54,26 @@ const AboutCont = styled.div`
     }
   }
 
-  .contactSec{
-    margin-left: 130px;
-    margin-bottom: 50px;
-    display: flex;
-
-    @media (max-width:450px) {
-      margin-left: 0px;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
   .contactInfo{
-    margin-left: 50px;
+    margin-left: 130px;
     margin-right: 100px;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
     @media (max-width:450px) {
       margin-bottom: 40px;
       margin-right: 50px;
+      margin-left: 50px;
     }
   }
 
   .icon {
-    margin-left: 50px;
+    margin-left: 130px;
     margin-right: 100px;
     margin-bottom: 50px;
     @media (max-width:450px) {
       margin-top: 0px;
+      margin-left: 50px;
     }
   }
 
@@ -99,6 +90,12 @@ const AboutCont = styled.div`
     width: 45px;
     height: 45px;
     margin-left: 40px;
+  }
+
+  .ellipse{
+    @media (max-width:450px) {
+      display: none;
+    }
   }
 `;
 
@@ -155,8 +152,8 @@ const About = ({}) => {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Julian Mayes" title="Project manager + Lead Developer" src="/Julian.svg" size="250px" linkin="https://www.linkedin.com/in/julian-mayes-b27898134/" ig="https://www.instagram.com/julianmayes.dev/"/>
-          <MemberCard name="Michael Trinh" title="Project manager + Front-end Developer" src="/Michael.svg" linkin="https://www.linkedin.com/in/michael-trinh-5558a71ba/" ig="https://www.instagram.com/michaelmikyle/"/>
+          <MemberCard name="Julian Mayes" title="Project manager & Lead Developer" src="/Julian.svg" size="250px" linkin="https://www.linkedin.com/in/julian-mayes-b27898134/" ig="https://www.instagram.com/julianmayes.dev/"/>
+          <MemberCard name="Michael Trinh" title="Project manager & Developer" src="/Michael.svg" linkin="https://www.linkedin.com/in/michael-trinh-5558a71ba/" ig="https://www.instagram.com/michaelmikyle/"/>
           <MemberCard/>
         </div>
 
@@ -169,30 +166,31 @@ const About = ({}) => {
           </Info>
         </div>
         <div className="memberCard">
-          <MemberCard name="Juhee Kim" title="Lead Designer + UI/UX Designer" src="/Juhee.svg" color="#EE9837" linkin="https://www.linkedin.com/in/juhee-kim-10771a1b1/" ig="https://www.instagram.com/juheekimdesign/"/>
-          <MemberCard name="Glian Palma" title="UI/UX Designer + Front-end Develper" src="/Glian.svg" color="#EE9837" size="220px"/>
-          <MemberCard name="Tiffany Tu" title="UI/UX Designer + Marketer" src="/Tiffany.svg" color="#EE9837" ig="https://www.instagram.com/tiff_tu/" linkin="https://www.linkedin.com/in/tiffany-t-334858188/"/>
+          <MemberCard name="Juhee Kim" title="Lead Designer & UI/UX Designer" src="/Juhee.svg" color="#EE9837" linkin="https://www.linkedin.com/in/juhee-kim-10771a1b1/" ig="https://www.instagram.com/juheekimdesign/"/>
+          <MemberCard name="Glian Palma" title="UI/UX Designer & Front-end Developer" src="/Glian.svg" color="#EE9837" size="220px" linkin="https://www.linkedin.com/in/glian-palma-6330b8227" ig="https://www.instagram.com/gliandesigns/"/>
+          <MemberCard name="Tiffany Tu" title="UI/UX Designer & Marketer" src="/Tiffany.svg" color="#EE9837" ig="https://www.instagram.com/tiff_tu/" linkin="https://www.linkedin.com/in/tiffany-t-334858188/"/>
         </div>
 
         <SubTitle>Want to get started?</SubTitle>
-        <div className="contactSec">
-          <Form/>
           <div className="contactInfoSec">
             <div className="contactInfo">
               Reshare helps reduce food waste in Vancouver by letting grocery stores sell excess inventory at a discounted price.
             </div>
             <div className="contactInfo">
               Want to get started?
+              <Email/>
             </div>
             <div className="icon">
               <img src="/Union.svg"></img>
               <img className="bcit" src="/bc-institute-technology.png"></img>
             </div>
-          </div>        
+          </div>
+        <div className="ellipse">       
+        <Ellipse color="rgba(231, 247, 195, 0.45)"/>
+        <Ellipse top="500px" left="-100px"/>
+        <Ellipse color="rgba(238, 152, 55, 0.1)" top="850px"/>
+        <Ellipse color="rgba(238, 152, 55, 0.4)" top="1200px" left="-100px"/>
         </div>
-        {/* <Arrow>
-          <img height="25px" src="./Arrow.svg"/>
-        </Arrow> */}
       </ContainerUI>
   </AboutCont>
 };

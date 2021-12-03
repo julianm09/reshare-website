@@ -69,7 +69,7 @@ const SocialIcon = styled.img`
 //props
 const MemberCard = ({
     name = "Daniel Fu",
-    title = "Front-end Developer",
+    title = "Developer",
     src = "/daniel.svg",
     color = "#DFEFB9",
     size = "200px",

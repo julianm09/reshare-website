@@ -6,13 +6,19 @@ const Cont = styled.div`
     height: 400px;
     background-color: ${prop=>prop.color};
     border-radius: 200px;
+    position: absolute;
+    z-index: -1;
+    top: ${prop=>prop.top};
+    left: ${prop=>prop.left};
 `
 
 //props
 const Ellipse = ({
     color = "rgba(244, 255, 219, 0.54)",
+    top = "100px",
+    left = "1300px",
 }) => {
-    return <Cont color={color}>
+    return <Cont color={color} top={top} left={left}>
     </Cont>
 }
 

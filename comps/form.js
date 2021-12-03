@@ -120,7 +120,7 @@ const Form = ({
                 <MidTitleInput line="225px"></MidTitleInput>
             </MidSec>
         </Mid>
-        <Bot onClick="/">
+        <Bot>
             <ButtonText>SUBMIT</ButtonText>
         </Bot>
     </Cont>
