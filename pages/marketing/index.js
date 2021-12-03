@@ -38,6 +38,11 @@ const CartImage = styled.div`
     width: 100%;
     height: 700px;
     overflow: hidden;
+
+    @media (max-width:450px) {
+      height:auto;
+      margin-top: 100px;
+    }
 `;
 
 const ReshareProduct = styled.div`
@@ -46,11 +51,26 @@ const ReshareProduct = styled.div`
     width: 100%;
     height: 1024px;
     padding: 100px 114px 0 80px ;
+
+    @media (max-width:450px) {
+      height:auto;
+      padding: 0;
+      margin-bottom: 10px;
+    }
 `;
 const MarketingTitle = styled.p`
     font-size: 90px;
     font-weight: 500;
     margin-bottom: 100px;
+
+    @media (max-width:450px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
 `; 
 
 

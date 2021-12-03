@@ -8,6 +8,12 @@ const ImageContainer = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @media (max-width:450px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 `;
 
 const ImageCard = styled.div`
