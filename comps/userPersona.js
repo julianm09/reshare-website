@@ -10,10 +10,11 @@ const Cont = styled.div`
     flex-direction: column;
 
     @media (max-width:450px) {
-        margin: 20px 0 20px 0;
-        width: 100%;
-        max-width: 450px;
+        width: 300px;
         overflow: hidden;
+        height: auto;
+        margin: 0px;
+        margin-bottom: 50px;
     }
 `;
 const Top = styled.div`
@@ -47,7 +48,7 @@ const Name = styled.text`
     font-size: 36px;
 
     @media (max-width:450px) {
-        font-size: 22px;
+        font-size: 16px;
     }
 `;
 const InfoItems = styled.div`

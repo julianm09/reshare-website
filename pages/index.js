@@ -102,7 +102,7 @@ const Arrow = styled.div`
   z-index:1000;
 
   @media (max-width:450px) {
-    height: 90%;
+    height: 100%;
   }
 `;
 

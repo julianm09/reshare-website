@@ -35,7 +35,7 @@ const Arrow = styled.div`
   z-index:1000;
 
   @media (max-width:450px) {
-    height: 90%;
+    height: 100%;
   }
 `;
 
@@ -298,6 +298,7 @@ const ProfileTarget = styled.div`
   z-index:1;
   @media (max-width:450px) {
     margin-left: 30px;
+    margin-top: 50px;
   }
 `;
 
@@ -306,6 +307,10 @@ const ProfileHeader = styled.p`
   font-size: 70px;
   font-weight: 500;
   margin: 0;
+
+  @media (max-width:450px) {
+    font-size: 30px;
+  }
 `;
 
 const PersonaContainer = styled.div`
@@ -317,7 +322,7 @@ const PersonaContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
-    padding-left: 30px;
+    /* padding-left: 30px; */
   }
 `;
 //--------- User Profile End ---------
@@ -871,7 +876,7 @@ The orange and yellow means joy, happiness, and creativity.
       </ColorRow>
       <ColorRow>
         <ColorCard color="#EE9837" title="~ Carrot Orange" hexNumber="#EE9837" R="238" G="152" B="55"/>
-        <ColorCard color="#57BA68" title="~ Tea Green" hexNumber="#57BA68" R="87" G="186" B="104"/>
+        <ColorCard color="#57BA68" title="~ Emerald" hexNumber="#57BA68" R="87" G="186" B="104"/>
       </ColorRow>
     </ColorRightContainer>
   </ColorContainer>
