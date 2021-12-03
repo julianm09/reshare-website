@@ -49,6 +49,12 @@ const Circle = styled.div`
   background-color: #DFEFB9;
   z-index: 0;
 
+  @media (max-width:503px) {
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+    max-width: 300px;
+  }
 
 `;
 const Lime = styled.div`
@@ -150,7 +156,7 @@ const ReshareParagraph = styled.p`
   width: 387px;
 
   @media (max-width:450px) {
-
+    width: 80vw;
   }
   
 `;
@@ -209,8 +215,6 @@ const SoltuionHeader = styled.p`
   font-weight: 500;
   margin: 0;
 
-  @media (max-width:450px) {
-  }
 `;
 const Solutions = styled.div`
   display: flex;

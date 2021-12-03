@@ -16,11 +16,10 @@ const ContainerUI = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color:white;
-
 `;
 
 const Arrow = styled.div`
@@ -47,14 +46,14 @@ const ProgressContainer = styled.div`
   justify-content: center;
   width: 100vw;
   height: 1024px;
+  padding: 30px;
   /* background-color: #F3F3F3; */
   
   @media (max-width:950px) {
     flex-direction: column;
-  }
-  @media (max-width:950px) {
-    flex-direction: column;
-    height: 1120px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 900px;
   }
 `;
 const ProgressReshare = styled.div`
@@ -62,13 +61,9 @@ const ProgressReshare = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-left: 150px;
-  flex-grow: 1;
+  width: 50%;
 
   @media (max-width:950px) {
-    margin-left: 0px;
-    position: relative;
-    top: 150px;
   }
 `;
 const Hashtag = styled.p`
@@ -80,22 +75,28 @@ const ReshareHeader = styled.p`
   font-size: 70px;
   font-weight: 500;
   margin: 0;
+  @media (max-width:910px){
+    font-size: 60px;
+  }
 `;
 const ReshareParagraph = styled.p`
   color: grey;
   font-size: 14px;
   width: 387px;
 
+  @media (max-width:450px) {
+    width: 80vw;
+  }
   
 `;
 const ProgressImage = styled.div`
   display: flex;
-  flex-grow: 1;
+  width: 100%;
+  max-width: 450px;
   justify-content: center;
   align-items: center;
-
+  
   @media (max-width:450px) {
-    margin-top: 130px;
     max-width: 450px;
     overflow: hidden;
   }
@@ -153,8 +154,7 @@ const Solutions = styled.div`
 
   @media (max-width:950px) {
     flex-direction: row;  }
-    @media (max-width:950px) {
-    flex-direction: row;  }
+
 `;
 const SolutionStore = styled.div`
   display:flex ;
@@ -162,6 +162,8 @@ const SolutionStore = styled.div`
   justify-content: center;
   align-items: center;
   margin:75px;
+  width: 185px;
+  height: 350px;
 
   @media (max-width:950px) {
     margin:10px;
@@ -187,7 +189,7 @@ const ProcessContainer = styled.div`
   width: 100vw;
   height: 800px;
   /* background-color: #F3F3F3; */
-  @media (max-width:450px) {
+  @media (max-width:910px) {
     height: 1300px;
   }
 `;
@@ -195,6 +197,7 @@ const ProcessTimeline = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  font-size:14px ;
   /* margin-top: 100px; */
   margin-left: 150px;
   color: #EE9837;
@@ -219,9 +222,9 @@ const TableContainer = styled.div`
   height: 100vh;
   padding: 100px;
   /* background-color: blue; */
-  @media (max-width:450px) {
-    max-width: 450px;
-    height: 1300px;
+  @media (max-width:910px) {
+    max-width: 100%;
+    height: 100%;
     overflow: hidden;
     flex-direction: column;
     justify-content: flex-start;
@@ -234,9 +237,8 @@ const ProcessTable = styled.div`
     align-items: flex-start;
     flex-direction: column;
     width: 376px;
-    height: ${props=>props.height};
     background-color: white;
-
+    
     @media (max-width:450px) {
       width: 120px;
       margin-bottom: 30px;
@@ -280,7 +282,7 @@ const ProfileContainer = styled.div`
   height: 1024px;
   /* background-color: #F3F3F3; */
   @media (max-width:450px) {
-      height: 1100px;
+      height: 1200px;
     }
 `;
 
@@ -292,7 +294,6 @@ const ProfileTarget = styled.div`
   margin-left: 150px;
   color: #EE9837;
   z-index:1;
-
   @media (max-width:450px) {
     margin-left: 30px;
   }
@@ -314,6 +315,8 @@ const PersonaContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
+    padding-left: 30px;
+
     margin-left: 30px;
   }
 `;
@@ -385,7 +388,7 @@ const TextContainer = styled.div`
   background-color: #FFF9EE;
 
   @media (max-width:450px) {
-    padding: 0px;
+    padding: 30px;
     width: 100%;
 }
 `;
@@ -414,7 +417,6 @@ const StyleGuideTitle = styled.div`
   z-index:1;
 
   @media (max-width:450px) {
-    margin-left: 30px;
     }
 `;
 
@@ -432,7 +434,9 @@ const StyleGuideInfo = styled.div`
   margin: 0;
   width: 420px;
   @media (max-width:450px) {
-    margin-left: 30px;
+    font-size: 12px;
+    width: 100%;
+    max-width: 450px;
     }
 `;
 //---------- StyleGuide End ------------
@@ -607,7 +611,7 @@ export default function Home() {
     </ProgressReshare>
 
     <ProgressImage>
-      <img width="700px" src="./MobileApp.svg"/>
+      <img maxWidth="500px" width="100%" src="./MobileApp.svg"/>
     </ProgressImage>
   </ProgressContainer>
 
@@ -625,17 +629,17 @@ export default function Home() {
 
   <Solutions>
     <SolutionStore>
-      <img width="100%" height="100%" src="./StoreMobile.svg"/>
+      <img maxWidth="185px" width="100%" height="100%" src="./StoreMobile.svg"/>
       <SolutionText>Grocery stores upload photos of ingredients</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="100%" height="100%" src="./CustomerMobile.svg"/>
+      <img maxWidth="185px" width="100%" height="100%" src="./CustomerMobile.svg"/>
       <SolutionText>Customer schedules pickup time</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="100%" height="100%" src="./OrangeMobile.svg"/>
+      <img maxWidth="185px" width="100%" height="100%" src="./OrangeMobile.svg"/>
       <SolutionText>Customer picks up food</SolutionText>
 
     </SolutionStore>
