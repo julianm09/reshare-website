@@ -9,6 +9,12 @@ const Cont = styled.div`
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     margin: 20px;
+
+    @media (max-width:450px) {
+        font-size: 12px;
+        width: 100%;
+        max-width: 450px ;
+    }
 `;
 
 const Top = styled.div`
@@ -17,6 +23,12 @@ const Top = styled.div`
     height: 207px;
     background: ${prop=>prop.color};
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width:450px) {
+        height: 100%;
+        max-height: 150px;
+        width: 100%;
+        max-width: 180px ;
+    }
 `
 
 const Bot = styled.div`
@@ -26,6 +38,11 @@ const Bot = styled.div`
     height: 76px;
     background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (max-width:450px) {
+        width: 100%;
+        max-width: 180px;
+    }
 `
 
 const Textbox = styled.div`

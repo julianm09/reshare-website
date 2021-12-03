@@ -14,6 +14,10 @@ const ContainerUI = styled.div`
   color: #484349;
   font-family: "Poppins", sans-serif;
   width: 100%;
+
+  @media (max-width:450px){
+    padding-top: 200px;
+  }
 `;
 
 const Arrow = styled.div`

@@ -19,6 +19,7 @@ const ContainerUI = styled.div`
   height: 100vh;
   margin: 0;
   padding: 0;
+  height: 100%;
   background-color:white;
 `;
 
@@ -51,7 +52,8 @@ const ProgressContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
-    justify-content: flex-start;
+    padding-top: 100px;
+    justify-content: center;
     align-items: flex-start;
     height: 900px;
   }
@@ -316,8 +318,6 @@ const PersonaContainer = styled.div`
   @media (max-width:950px) {
     flex-direction: column;
     padding-left: 30px;
-
-    margin-left: 30px;
   }
 `;
 //--------- User Profile End ---------
@@ -375,6 +375,7 @@ const StyleguideContainer = styled.div`
   
   @media (max-width:450px) {
     flex-direction: column;
+    height: 100%;
     }
 `;
 
@@ -452,13 +453,17 @@ const TypographyContainer = styled.div`
   background-color: #EE9837;
 
   @media (max-width:450px) {
-    display: none;
+    height: 100%;
   }
 
 `;
 const TypoContainers = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media (max-width:450px) {
+    flex-direction: column;
+  }
 `;
 const TypographyTopContainer = styled.div`
   display: flex;
@@ -468,6 +473,10 @@ const TypographyTopContainer = styled.div`
   width: 50%;
   height: 100%;
   color: #FFEE90;
+  @media (max-width:450px) {
+    padding-left: 30px;
+    width: 100%;
+  }
 `;
 const TypographyTitle = styled.div`
   display: flex;
@@ -477,12 +486,20 @@ const TypographyTitle = styled.div`
   color: #FFEE90;
   z-index:1;
   margin-left: 150px;
+
+  @media (max-width:450px) {
+    margin-left: 30px;
+  }
 `;
 const TypographyHeader = styled.p`
   color: #FFEE90;
   font-size: 70px;
   font-weight: 500;
   margin:0 0 50px 0;
+
+  @media (max-width:450px) {
+      font-size: 50px;
+  }
 `;
 const FirstFont = styled.div`
   display: flex;
@@ -523,11 +540,16 @@ const TypographyBottomContainer = styled.div`
   width: 50%;
   height: 100%;
   color: #FFEE90;
+  @media (max-width:450px) {
+    width: 100%;
+    padding-left: 30px;
+  }
 `;
 const Text = styled.p`
   color: black;
   font-size: 14px;
   margin-right: 30px;
+
 `;
 //---------- Typography End ----------
 
@@ -540,8 +562,8 @@ const ColorContainer = styled.div`
   width: 100vw;
   height: 1024px;
 
-  @media (max-width:350px) {
-    display: none;
+  @media (max-width:450px) {
+    flex-direction: column;
   }
 `;
 const ColorLeftContainer = styled.div`
@@ -551,6 +573,12 @@ const ColorLeftContainer = styled.div`
   padding-left: 150px;
   width: 50%;
   height: 100%;
+
+  @media (max-width:450px) {
+    width: 100%;
+    max-width:450px ;
+    padding-left: 30px;
+  }
 `;
 const ColorTitle = styled.div`
   display: flex;
@@ -565,12 +593,23 @@ const ColorHeader = styled.p`
   font-size: 70px;
   font-weight: 500;
   margin:0 0 50px 0;
+
+  @media (max-width:450px) {
+    font-size: 60px;
+  }
 `;
 const ColorInfo = styled.div`
   color: #262626;
   font-size: 18px;
   margin: 0;
   width: 350px;
+
+  @media (max-width:450px) {
+    font-size: 12px;
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+  }
 `;
 const ColorRightContainer = styled.div`
   display: flex;
@@ -579,6 +618,11 @@ const ColorRightContainer = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width:450px) {
+    width: 100%;
+    max-width: 450px;
+  }
 `;
 const ColorRow = styled.div`
   display: flex;
@@ -761,7 +805,7 @@ export default function Home() {
     </TextContainer>
 
     <ImageContainer>
-      <img width="457px" height="578px" src="./Logos.svg"/>
+      <img maxWidth="457px" width="100%" src="./Logos.svg"/>
     </ImageContainer>
   </StyleguideContainer>
 </div>

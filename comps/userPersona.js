@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Cont = styled.div`
-    height: 342px;
+    height: 360px;
     width: 443px;
     margin: 100px;
     display: flex;
@@ -10,12 +10,11 @@ const Cont = styled.div`
     flex-direction: column;
 
     @media (max-width:450px) {
-        margin: 20px 20px 20px 0;
+        margin: 20px 0 20px 0;
         width: 100%;
         max-width: 450px;
-        
+        overflow: hidden;
     }
-
 `;
 const Top = styled.div`
     display: flex;
