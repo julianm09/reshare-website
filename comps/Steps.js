@@ -13,8 +13,8 @@ const Rectangle = styled.div`
     padding: 10px;
     border-radius: 10px;
 
-    @media (max-width:450px) {
-        width: 200px;
+    @media (max-width:950px) {
+        width: 230px;
         height: 50px;
     }
 `;
@@ -22,7 +22,7 @@ const Text = styled.p`
     font-size: 14px;
     color: #535353;
 
-    @media (max-width:450px) {
+    @media (max-width:950px) {
         font-size: 12px;
     }
 `;

@@ -22,8 +22,6 @@ const ContainerUI = styled.div`
   height: 100%;
   background-color:white;
 
-  @media (max-width:450px) {
-}
 `;
 
 //------- Landing Page -------
@@ -41,16 +39,17 @@ const Circle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 503px;
-  height: 503px;
+
+  width: 100%;
+  max-width: 503px;
+
+  height: 100%;
+  max-height: 503px;
   border-radius: 300px;
   background-color: #DFEFB9;
   z-index: 0;
 
-  @media (max-width:450px) {
-    width: 375px;
-    height: 375px;
-  }
+
 `;
 const Lime = styled.div`
   position: absolute;
@@ -79,8 +78,8 @@ const ReshareTitle = styled.p`
   font-size: 100px;
   z-index:2;
 
-  @media (max-width:450px) {
-    font-size: 80px;
+  @media (max-width:910px) {
+    font-size: 12vw;
   }
 `;
 //------- Landing Page End --------
@@ -110,11 +109,14 @@ const ProgressContainer = styled.div`
   justify-content: center;
   width: 100vw;
   height: 1024px;
+  padding: 30px;
   /* background-color: #F3F3F3; */
   
   @media (max-width:950px) {
     flex-direction: column;
-    height: 1120px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 900px;
   }
 `;
 const ProgressReshare = styled.div`
@@ -122,13 +124,9 @@ const ProgressReshare = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-left: 150px;
-  flex-grow: 1;
+  width: 50%;
 
   @media (max-width:950px) {
-    margin-left: 0px;
-    position: relative;
-    top: 150px;
   }
 `;
 const Hashtag = styled.p`
@@ -140,24 +138,30 @@ const ReshareHeader = styled.p`
   font-size: 70px;
   font-weight: 500;
   margin: 0;
+
+  @media (max-width:910px){
+    font-size: 60px;
+  }
+
 `;
 const ReshareParagraph = styled.p`
   color: grey;
-  font-size: 14px;
+  font-size: 12px;
   width: 387px;
 
   @media (max-width:450px) {
+
   }
   
 `;
 const ProgressImage = styled.div`
   display: flex;
-  flex-grow: 1;
+  width: 100%;
+  max-width: 450px;
   justify-content: center;
   align-items: center;
   
   @media (max-width:450px) {
-    margin-top: 130px;
     max-width: 450px;
     overflow: hidden;
   }
@@ -230,7 +234,6 @@ const SolutionStore = styled.div`
 
   @media (max-width:950px) {
     margin:10px;
-  
   }
 `;
 const SolutionText = styled.p`
@@ -253,7 +256,7 @@ const ProcessContainer = styled.div`
   width: 100vw;
   height: 800px;
   /* background-color: #F3F3F3; */
-  @media (max-width:450px) {
+  @media (max-width:910px) {
     height: 1300px;
   }
 `;
@@ -261,6 +264,7 @@ const ProcessTimeline = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  font-size:14px ;
   /* margin-top: 100px; */
   margin-left: 150px;
   color: #EE9837;
@@ -285,9 +289,9 @@ const TableContainer = styled.div`
   height: 100vh;
   padding: 100px;
   /* background-color: blue; */
-  @media (max-width:450px) {
-    max-width: 450px;
-    height: 1300px;
+  @media (max-width:910px) {
+    max-width: 100%;
+    height: 100%;
     overflow: hidden;
     flex-direction: column;
     justify-content: flex-start;
@@ -320,7 +324,7 @@ const Title = styled.p`
 const DashedLine = styled.div`
   margin-right: 20px;
 
-  @media (max-width:450px) {
+  @media (max-width:910px) {
       display: none;
     }
 `;
@@ -377,7 +381,7 @@ export default function Home() {
     </ProgressReshare>
 
     <ProgressImage>
-      <img src="./MobileApp.svg"/>
+      <img maxWidth="500px" width="100%" src="./MobileApp.svg"/>
     </ProgressImage>
   </ProgressContainer>
 
@@ -395,17 +399,17 @@ export default function Home() {
 
   <Solutions>
     <SolutionStore>
-      <img width="100%" height="100%" src="./StoreMobile.svg"/>
+      <img maxWidth="185px" width="100%" height="100%" src="./StoreMobile.svg"/>
       <SolutionText>Grocery stores upload photos of ingredients</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="100%" height="100%" src="./CustomerMobile.svg"/>
+      <img maxWidth="185px" width="100%" height="100%" src="./CustomerMobile.svg"/>
       <SolutionText>Customer schedules pickup time</SolutionText>
     </SolutionStore>
 
     <SolutionStore>
-      <img width="100%" height="100%" src="./OrangeMobile.svg"/>
+      <img maxWidth="185px" width="100%" height="100%" src="./OrangeMobile.svg"/>
       <SolutionText>Customer picks up food</SolutionText>
 
     </SolutionStore>

@@ -4,7 +4,7 @@ import Link from "next/dist/client/link";
 const HeaderUI = styled.div`
   display: flex;
   height: 100px;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   justify-content: center;
   z-index: 10000;
@@ -16,9 +16,7 @@ const HeaderUI = styled.div`
     align-items: flex-start;
     height: 120px;
   }
-  @media (max-width:450px){
-    width: 100%;
-  }
+
 `;
 const ContainerUI = styled.div`
   width: 80%;
@@ -47,7 +45,7 @@ const Text = styled.p`
   color:${props=>props.color};
   @media (max-width:450px) {
     margin-right: 20px;
-    font-size:14px;
+    font-size: 14px;
   }
 `;
 
