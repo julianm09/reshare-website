@@ -261,7 +261,7 @@ const ProcessContainer = styled.div`
   height: 800px;
   /* background-color: #F3F3F3; */
   @media (max-width:910px) {
-    height: 1300px;
+    height: 100%;
   }
 `;
 const ProcessTimeline = styled.div`
@@ -311,7 +311,7 @@ const ProcessTable = styled.div`
     background-color: white;
     
     @media (max-width:450px) {
-      width: 120px;
+      width: 100%;
       margin-bottom: 30px;
     }
 `;
@@ -341,6 +341,11 @@ const ProcessTable2 = styled.div`
     width: 511px;
     height: ${props=>props.height};
     background-color: white;
+
+    @media (max-width:450px) {
+      width: 100%;
+      height: 100%;
+    }
 `;
 
 
@@ -465,7 +470,8 @@ export default function Home() {
   <ProcessContainer>
     <TableContainer>
     <ProcessTable2>
-      <Title>Design/ Development Research week 3 - week 5</Title>
+      <Title>Design/ Development Research
+        <br/> week 3 - week 5</Title>
       <Step bgcolor="#FFE5E5" RectangleText="Wireframe" />
       <Step bgcolor="#FFE5E5" RectangleText="Low fidelity prototype" marginleft="20px"/>
       <Step bgcolor="#FFE5E5" RectangleText="create a development flow" marginleft="60px"/>

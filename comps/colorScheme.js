@@ -41,7 +41,7 @@ const Bot = styled.div`
 
     @media (max-width:450px) {
         width: 100%;
-        max-width: 180px;
+        min-width: 130px;
     }
 `
 
@@ -67,6 +67,10 @@ const HexNumber = styled.text`
 
 const RGBDiv = styled.div`
     display: flex;
+
+    @media (max-width:450px) {
+        display: none;
+    }
 `
 
 const RGB = styled.text`

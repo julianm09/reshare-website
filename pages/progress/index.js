@@ -52,7 +52,7 @@ const ProgressContainer = styled.div`
   
   @media (max-width:950px) {
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 130px;
     justify-content: center;
     align-items: flex-start;
     height: 900px;
@@ -242,7 +242,7 @@ const ProcessTable = styled.div`
     background-color: white;
     
     @media (max-width:450px) {
-      width: 120px;
+      width: 100%;
       margin-bottom: 30px;
     }
 `;
@@ -735,7 +735,8 @@ export default function Home() {
   <ProcessContainer>
     <TableContainer>
     <ProcessTable2>
-      <Title>Design/ Development Research week 3 - week 5</Title>
+      <Title>Design/ Development Research
+        <br/> week 3 - week 5</Title>
       <Step bgcolor="#FFE5E5" RectangleText="Wireframe" />
       <Step bgcolor="#FFE5E5" RectangleText="Low fidelity prototype" marginleft="20px"/>
       <Step bgcolor="#FFE5E5" RectangleText="create a development flow" marginleft="60px"/>
@@ -751,7 +752,8 @@ export default function Home() {
     </DashedLine>
 
     <ProcessTable2>
-      <Title>Design / Validation / Testing / Development week 6 - Final week</Title>
+      <Title>Design / Validation / Testing / Development 
+        <br/>week 6 - Final week</Title>
       <Step bgcolor="#FFF3B2" RectangleText="User testing with Lo-Fi prototypes" />
       <Step bgcolor="#FFF3B2" RectangleText="Build pages" marginleft="40px"/>
       <Step bgcolor="#FFF3B2" RectangleText="State management with react context" marginleft="40px"/>

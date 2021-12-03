@@ -33,7 +33,6 @@ const ContainerUI = styled.div`
   }
 `;
 const Icon = styled.div`
-  flex-grow: 10;
   width: 55px;
   height: 55px;
   @media (max-width:450px) {
@@ -44,7 +43,7 @@ const Icon = styled.div`
 `;
 const LinkContainer = styled.div`
   display: flex;
-`;
+  `;
 const Text = styled.p`
   margin-right: 50px;
   color:${props=>props.color};
