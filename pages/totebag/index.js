@@ -28,6 +28,11 @@ const TopPageContainer = styled.div`
     height: 1024px;
     padding-top: 100px;
     overflow: hidden;
+
+    @media (max-width:450px) {
+      height: auto;
+      margin-bottom: 50px;
+    }
 `;
 const LeftContainer = styled.div`
     display: flex;
@@ -35,6 +40,11 @@ const LeftContainer = styled.div`
     align-items: flex-start;
     width: 45%;
     height: 1024px;
+
+    @media (max-width:450px) {
+      display: none;
+      height: 0px;
+    }
 `;
 const RightContainer = styled.div`
     display: flex;
@@ -46,19 +56,34 @@ const RightContainer = styled.div`
     padding-top: 100px;
     padding-left: 101px;
     background-color: White;
+
+    @media (max-width:450px) {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
 `;
 const RightTitle = styled.p`
     font-size:28px;
     margin: 0;
+
+    @media (max-width:450px) {
+        font-size:22px;
+    }
 `;
 const RightSubHeading = styled.p`
     font-size: 18px;
+
+    @media (max-width:450px) {
+        font-size:16px;
+    }
 `;
 const PrimaryImage = styled.div`
     display: flex;
     margin-top: 15px;
 `;
-
 
 const ReshareProduct = styled.div`
     display: flex;
@@ -66,11 +91,26 @@ const ReshareProduct = styled.div`
     width: 100%;
     height: 1024px;
     padding: 100px 114px 0 80px ;
+
+    @media (max-width:450px) {
+      height:auto;
+      padding: 0;
+      margin-bottom: 10px;
+    }
 `;
 const MarketingTitle = styled.p`
     font-size: 90px;
     font-weight: 500;
     margin-bottom: 100px;
+
+    @media (max-width:450px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
 `; 
 
 
